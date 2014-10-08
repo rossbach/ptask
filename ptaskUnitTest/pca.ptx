@@ -1,0 +1,1600 @@
+	.version 2.3
+	.target sm_20
+	.address_size 64
+	// compiled with C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.0\\bin/../open64/lib//be.exe
+	// nvopencc 4.0 built on 2011-05-13
+
+	.visible .func _Z18blasDcopy_internaliPKdiPdi (.param .s32 __cudaparmf1__Z18blasDcopy_internaliPKdiPdi, .param .u64 __cudaparmf2__Z18blasDcopy_internaliPKdiPdi, .param .s32 __cudaparmf3__Z18blasDcopy_internaliPKdiPdi, .param .u64 __cudaparmf4__Z18blasDcopy_internaliPKdiPdi, .param .s32 __cudaparmf5__Z18blasDcopy_internaliPKdiPdi)
+
+	.visible .func _Z18blasDaxpy_internalidPKdiPdi (.param .s32 __cudaparmf1__Z18blasDaxpy_internalidPKdiPdi, .param .f64 __cudaparmf2__Z18blasDaxpy_internalidPKdiPdi, .param .u64 __cudaparmf3__Z18blasDaxpy_internalidPKdiPdi, .param .s32 __cudaparmf4__Z18blasDaxpy_internalidPKdiPdi, .param .u64 __cudaparmf5__Z18blasDaxpy_internalidPKdiPdi, .param .s32 __cudaparmf6__Z18blasDaxpy_internalidPKdiPdi)
+
+	.visible .func _Z18blasDgemv_internalbiidPKdiS0_idPdib (.param .s32 __cudaparmf1__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf2__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf3__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .f64 __cudaparmf4__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf5__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf6__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf7__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf8__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .f64 __cudaparmf9__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf10__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf11__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf12__Z18blasDgemv_internalbiidPKdiS0_idPdib)
+
+	.visible .func _Z18blasDscal_internalidPdi (.param .s32 __cudaparmf1__Z18blasDscal_internalidPdi, .param .f64 __cudaparmf2__Z18blasDscal_internalidPdi, .param .u64 __cudaparmf3__Z18blasDscal_internalidPdi, .param .s32 __cudaparmf4__Z18blasDscal_internalidPdi)
+
+	.visible .func _Z17blasDger_internaliidPKdiS0_iPdi (.param .s32 __cudaparmf1__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf2__Z17blasDger_internaliidPKdiS0_iPdi, .param .f64 __cudaparmf3__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf4__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf5__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf6__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf7__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf8__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf9__Z17blasDger_internaliidPKdiS0_iPdi)
+
+	.visible .func _Z18blasDnrm2_internaliPKdiPd (.param .s32 __cudaparmf1__Z18blasDnrm2_internaliPKdiPd, .param .u64 __cudaparmf2__Z18blasDnrm2_internaliPKdiPd, .param .s32 __cudaparmf3__Z18blasDnrm2_internaliPKdiPd, .param .u64 __cudaparmf4__Z18blasDnrm2_internaliPKdiPd)
+
+	//-----------------------------------------------------------
+	// Compiling C:/Users/jcurrey/AppData/Local/Temp/tmpxft_00003018_00000000-11_blas_kernel.cpp3.i (C:/Users/jcurrey/AppData/Local/Temp/ccBI#.a10200)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_20, Endian:little, Pointer Size:64
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"C:/Users/jcurrey/AppData/Local/Temp/tmpxft_00003018_00000000-10_blas_kernel.cudafe2.gpu"
+	.file	2	"blas_kernel.cu"
+	.file	3	"c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h"
+	.file	4	"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v4.0//include\crt/device_runtime.h"
+	.file	5	"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v4.0//include\host_defines.h"
+	.file	6	"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v4.0//include\builtin_types.h"
+	.file	7	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\device_types.h"
+	.file	8	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\driver_types.h"
+	.file	9	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\surface_types.h"
+	.file	10	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\texture_types.h"
+	.file	11	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\vector_types.h"
+	.file	12	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\builtin_types.h"
+	.file	13	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\host_defines.h"
+	.file	14	"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v4.0//include\device_launch_parameters.h"
+	.file	15	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\crt\storage_class.h"
+	.file	16	"C:/Program Files (x86)/Microsoft Visual Studio 10.0/VC/bin/../../VC/INCLUDE\time.h"
+	.file	17	"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v4.0//include\common_functions.h"
+	.file	18	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\math_functions.h"
+	.file	19	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\math_constants.h"
+	.file	20	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\device_functions.h"
+	.file	21	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\sm_11_atomic_functions.h"
+	.file	22	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\sm_12_atomic_functions.h"
+	.file	23	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\sm_13_double_functions.h"
+	.file	24	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\sm_20_atomic_functions.h"
+	.file	25	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\sm_20_intrinsics.h"
+	.file	26	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\surface_functions.h"
+	.file	27	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\texture_fetch_functions.h"
+	.file	28	"c:\program files\nvidia gpu computing toolkit\cuda\v4.0\include\math_functions_dbl_ptx3.h"
+
+
+	.visible .func _Z18blasDcopy_internaliPKdiPdi (.param .s32 __cudaparmf1__Z18blasDcopy_internaliPKdiPdi, .param .u64 __cudaparmf2__Z18blasDcopy_internaliPKdiPdi, .param .s32 __cudaparmf3__Z18blasDcopy_internaliPKdiPdi, .param .u64 __cudaparmf4__Z18blasDcopy_internaliPKdiPdi, .param .s32 __cudaparmf5__Z18blasDcopy_internaliPKdiPdi)
+	{
+	.reg .u32 %r<27>;
+	.reg .u64 %rd<12>;
+	.reg .f64 %fd<3>;
+	.reg .pred %p<3>;
+	.loc	2	38	0
+$LDWbegin__Z18blasDcopy_internaliPKdiPdi:
+	ld.param.u32 	%r1, [__cudaparmf1__Z18blasDcopy_internaliPKdiPdi];
+	mov.s32 	%r2, %r1;
+	ld.param.u64 	%rd1, [__cudaparmf2__Z18blasDcopy_internaliPKdiPdi];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r3, [__cudaparmf3__Z18blasDcopy_internaliPKdiPdi];
+	mov.s32 	%r4, %r3;
+	ld.param.u64 	%rd3, [__cudaparmf4__Z18blasDcopy_internaliPKdiPdi];
+	mov.s64 	%rd4, %rd3;
+	ld.param.u32 	%r5, [__cudaparmf5__Z18blasDcopy_internaliPKdiPdi];
+	mov.s32 	%r6, %r5;
+	mov.u32 	%r7, %ctaid.x;
+	mov.u32 	%r8, %ntid.x;
+	mul.lo.u32 	%r9, %r7, %r8;
+	mov.u32 	%r10, %tid.x;
+	add.u32 	%r11, %r10, %r9;
+	mov.u32 	%r12, %tid.y;
+	mov.u32 	%r13, %ctaid.y;
+	mov.u32 	%r14, %ntid.y;
+	mul.lo.u32 	%r15, %r13, %r14;
+	add.u32 	%r16, %r12, %r15;
+	mov.s32 	%r17, 0;
+	set.eq.u32.s32 	%r18, %r16, %r17;
+	neg.s32 	%r19, %r18;
+	set.gt.u32.s32 	%r20, %r2, %r11;
+	neg.s32 	%r21, %r20;
+	and.b32 	%r22, %r19, %r21;
+	mov.u32 	%r23, 0;
+	setp.eq.s32 	%p1, %r22, %r23;
+	@%p1 bra 	$Lt_0_1282;
+	.loc	2	48	0
+	mul.lo.s32 	%r24, %r4, %r11;
+	cvt.s64.s32 	%rd5, %r24;
+	mul.wide.s32 	%rd6, %r24, 8;
+	add.u64 	%rd7, %rd2, %rd6;
+	ld.f64 	%fd1, [%rd7+0];
+	mul.lo.s32 	%r25, %r6, %r11;
+	cvt.s64.s32 	%rd8, %r25;
+	mul.wide.s32 	%rd9, %r25, 8;
+	add.u64 	%rd10, %rd4, %rd9;
+	st.f64 	[%rd10+0], %fd1;
+$Lt_0_1282:
+	.loc	2	50	0
+	ret;
+$LDWend__Z18blasDcopy_internaliPKdiPdi:
+	} // _Z18blasDcopy_internaliPKdiPdi
+
+	.visible .func _Z18blasDaxpy_internalidPKdiPdi (.param .s32 __cudaparmf1__Z18blasDaxpy_internalidPKdiPdi, .param .f64 __cudaparmf2__Z18blasDaxpy_internalidPKdiPdi, .param .u64 __cudaparmf3__Z18blasDaxpy_internalidPKdiPdi, .param .s32 __cudaparmf4__Z18blasDaxpy_internalidPKdiPdi, .param .u64 __cudaparmf5__Z18blasDaxpy_internalidPKdiPdi, .param .s32 __cudaparmf6__Z18blasDaxpy_internalidPKdiPdi)
+	{
+	.reg .u32 %r<27>;
+	.reg .u64 %rd<12>;
+	.reg .f64 %fd<7>;
+	.reg .pred %p<3>;
+	.loc	2	135	0
+$LDWbegin__Z18blasDaxpy_internalidPKdiPdi:
+	ld.param.u32 	%r1, [__cudaparmf1__Z18blasDaxpy_internalidPKdiPdi];
+	mov.s32 	%r2, %r1;
+	ld.param.f64 	%fd1, [__cudaparmf2__Z18blasDaxpy_internalidPKdiPdi];
+	mov.f64 	%fd2, %fd1;
+	ld.param.u64 	%rd1, [__cudaparmf3__Z18blasDaxpy_internalidPKdiPdi];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r3, [__cudaparmf4__Z18blasDaxpy_internalidPKdiPdi];
+	mov.s32 	%r4, %r3;
+	ld.param.u64 	%rd3, [__cudaparmf5__Z18blasDaxpy_internalidPKdiPdi];
+	mov.s64 	%rd4, %rd3;
+	ld.param.u32 	%r5, [__cudaparmf6__Z18blasDaxpy_internalidPKdiPdi];
+	mov.s32 	%r6, %r5;
+	mov.u32 	%r7, %ctaid.x;
+	mov.u32 	%r8, %ntid.x;
+	mul.lo.u32 	%r9, %r7, %r8;
+	mov.u32 	%r10, %tid.x;
+	add.u32 	%r11, %r10, %r9;
+	mov.u32 	%r12, %tid.y;
+	mov.u32 	%r13, %ctaid.y;
+	mov.u32 	%r14, %ntid.y;
+	mul.lo.u32 	%r15, %r13, %r14;
+	add.u32 	%r16, %r12, %r15;
+	mov.s32 	%r17, 0;
+	set.eq.u32.s32 	%r18, %r16, %r17;
+	neg.s32 	%r19, %r18;
+	set.gt.u32.s32 	%r20, %r2, %r11;
+	neg.s32 	%r21, %r20;
+	and.b32 	%r22, %r19, %r21;
+	mov.u32 	%r23, 0;
+	setp.eq.s32 	%p1, %r22, %r23;
+	@%p1 bra 	$Lt_1_1282;
+	.loc	2	145	0
+	mul.lo.s32 	%r24, %r6, %r11;
+	cvt.s64.s32 	%rd5, %r24;
+	mul.wide.s32 	%rd6, %r24, 8;
+	add.u64 	%rd7, %rd4, %rd6;
+	ld.f64 	%fd3, [%rd7+0];
+	mul.lo.s32 	%r25, %r4, %r11;
+	cvt.s64.s32 	%rd8, %r25;
+	mul.wide.s32 	%rd9, %r25, 8;
+	add.u64 	%rd10, %rd2, %rd9;
+	ld.f64 	%fd4, [%rd10+0];
+	mad.rn.f64 	%fd5, %fd4, %fd2, %fd3;
+	st.f64 	[%rd7+0], %fd5;
+$Lt_1_1282:
+	.loc	2	147	0
+	ret;
+$LDWend__Z18blasDaxpy_internalidPKdiPdi:
+	} // _Z18blasDaxpy_internalidPKdiPdi
+
+	.visible .func _Z18blasDgemv_internalbiidPKdiS0_idPdib (.param .s32 __cudaparmf1__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf2__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf3__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .f64 __cudaparmf4__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf5__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf6__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf7__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf8__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .f64 __cudaparmf9__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .u64 __cudaparmf10__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf11__Z18blasDgemv_internalbiidPKdiS0_idPdib, .param .s32 __cudaparmf12__Z18blasDgemv_internalbiidPKdiS0_idPdib)
+	{
+	.reg .u32 %r<46>;
+	.reg .u64 %rd<31>;
+	.reg .f64 %fd<17>;
+	.reg .pred %p<9>;
+	.loc	2	228	0
+$LDWbegin__Z18blasDgemv_internalbiidPKdiS0_idPdib:
+	ld.param.u32 	%r1, [__cudaparmf1__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	cvt.s8.s32 	%r2, %r1;
+	ld.param.u32 	%r3, [__cudaparmf2__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s32 	%r4, %r3;
+	ld.param.u32 	%r5, [__cudaparmf3__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s32 	%r6, %r5;
+	ld.param.f64 	%fd1, [__cudaparmf4__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.f64 	%fd2, %fd1;
+	ld.param.u64 	%rd1, [__cudaparmf5__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r7, [__cudaparmf6__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s32 	%r8, %r7;
+	ld.param.u64 	%rd3, [__cudaparmf7__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s64 	%rd4, %rd3;
+	ld.param.u32 	%r9, [__cudaparmf8__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s32 	%r10, %r9;
+	ld.param.f64 	%fd3, [__cudaparmf9__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.f64 	%fd4, %fd3;
+	ld.param.u64 	%rd5, [__cudaparmf10__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s64 	%rd6, %rd5;
+	ld.param.u32 	%r11, [__cudaparmf11__Z18blasDgemv_internalbiidPKdiS0_idPdib];
+	mov.s32 	%r12, %r11;
+	mov.u32 	%r13, %ctaid.x;
+	mov.u32 	%r14, %ntid.x;
+	mul.lo.u32 	%r15, %r13, %r14;
+	mov.u32 	%r16, %tid.x;
+	add.u32 	%r17, %r16, %r15;
+	mov.u32 	%r18, %tid.y;
+	mov.u32 	%r19, %ctaid.y;
+	mov.u32 	%r20, %ntid.y;
+	mul.lo.u32 	%r21, %r19, %r20;
+	add.u32 	%r22, %r18, %r21;
+	mov.s32 	%r23, 0;
+	set.eq.u32.s32 	%r24, %r22, %r23;
+	neg.s32 	%r25, %r24;
+	mov.s32 	%r26, 1;
+	setp.eq.s32 	%p1, %r2, %r26;
+	selp.s32 	%r27, %r6, %r4, %p1;
+	set.gt.u32.s32 	%r28, %r27, %r17;
+	neg.s32 	%r29, %r28;
+	and.b32 	%r30, %r25, %r29;
+	mov.u32 	%r31, 0;
+	setp.eq.s32 	%p2, %r30, %r31;
+	@%p2 bra 	$Lt_2_4866;
+	.loc	2	260	0
+	mul.lo.s32 	%r32, %r12, %r17;
+	cvt.s64.s32 	%rd7, %r32;
+	mul.wide.s32 	%rd8, %r32, 8;
+	add.u64 	%rd9, %rd6, %rd8;
+	ld.f64 	%fd5, [%rd9+0];
+	mul.f64 	%fd6, %fd5, %fd4;
+	ld.f64 	%fd7, [%rd4+0];
+	mov.u32 	%r33, 0;
+	setp.ne.s32 	%p3, %r2, %r33;
+	@%p3 bra 	$Lt_2_5634;
+	.loc	2	264	0
+	cvt.s64.s32 	%rd10, %r17;
+	mul.wide.s32 	%rd11, %r17, 8;
+	add.u64 	%rd12, %rd2, %rd11;
+	ld.f64 	%fd8, [%rd12+0];
+	mul.f64 	%fd9, %fd8, %fd7;
+	mov.u32 	%r34, 1;
+	setp.le.s32 	%p4, %r6, %r34;
+	@%p4 bra 	$Lt_2_5890;
+	sub.s32 	%r35, %r6, 1;
+	cvt.s64.s32 	%rd13, %r10;
+	mul.wide.s32 	%rd14, %r10, 8;
+	add.u64 	%rd15, %rd14, %rd4;
+	cvt.s64.s32 	%rd16, %r8;
+	mul.wide.s32 	%rd17, %r8, 8;
+	add.s32 	%r36, %r8, %r17;
+	cvt.s64.s32 	%rd18, %r36;
+	mul.wide.s32 	%rd19, %r36, 8;
+	add.u64 	%rd20, %rd2, %rd19;
+	mov.s32 	%r37, 1;
+	mov.s32 	%r38, %r35;
+$Lt_2_6402:
+ //<loop> Loop body line 264, nesting depth: 1, estimated iterations: unknown
+	.loc	2	267	0
+	ld.f64 	%fd10, [%rd20+0];
+	ld.f64 	%fd11, [%rd15+0];
+	mad.rn.f64 	%fd9, %fd10, %fd11, %fd9;
+	add.s32 	%r37, %r37, 1;
+	add.u64 	%rd15, %rd15, %rd14;
+	add.u64 	%rd20, %rd17, %rd20;
+	setp.ne.s32 	%p5, %r6, %r37;
+	@%p5 bra 	$Lt_2_6402;
+$Lt_2_5890:
+	.loc	2	269	0
+	mad.rn.f64 	%fd6, %fd2, %fd9, %fd6;
+	bra.uni 	$Lt_2_5378;
+$Lt_2_5634:
+	.loc	2	272	0
+	mul.lo.s32 	%r39, %r8, %r17;
+	cvt.s64.s32 	%rd21, %r39;
+	mul.wide.s32 	%rd22, %r39, 8;
+	add.u64 	%rd23, %rd2, %rd22;
+	ld.f64 	%fd12, [%rd23+0];
+	mul.f64 	%fd13, %fd12, %fd7;
+	mov.u32 	%r40, 1;
+	setp.le.s32 	%p6, %r4, %r40;
+	@%p6 bra 	$Lt_2_6914;
+	sub.s32 	%r41, %r4, 1;
+	cvt.s64.s32 	%rd24, %r10;
+	mul.wide.s32 	%rd25, %r10, 8;
+	add.s32 	%r42, %r39, 1;
+	add.s32 	%r43, %r39, %r4;
+	add.u64 	%rd26, %rd25, %rd4;
+	cvt.s64.s32 	%rd27, %r42;
+	mul.wide.s32 	%rd28, %r42, 8;
+	add.u64 	%rd29, %rd2, %rd28;
+	mov.s32 	%r44, %r41;
+$Lt_2_7426:
+ //<loop> Loop body line 272, nesting depth: 1, estimated iterations: unknown
+	.loc	2	277	0
+	ld.f64 	%fd14, [%rd29+0];
+	ld.f64 	%fd15, [%rd26+0];
+	mad.rn.f64 	%fd13, %fd14, %fd15, %fd13;
+	add.s32 	%r42, %r42, 1;
+	add.u64 	%rd29, %rd29, 8;
+	add.u64 	%rd26, %rd26, %rd25;
+	setp.ne.s32 	%p7, %r42, %r43;
+	@%p7 bra 	$Lt_2_7426;
+$Lt_2_6914:
+	.loc	2	280	0
+	mad.rn.f64 	%fd6, %fd2, %fd13, %fd6;
+$Lt_2_5378:
+	.loc	2	283	0
+	st.f64 	[%rd9+0], %fd6;
+$Lt_2_4866:
+	.loc	2	299	0
+	ret;
+$LDWend__Z18blasDgemv_internalbiidPKdiS0_idPdib:
+	} // _Z18blasDgemv_internalbiidPKdiS0_idPdib
+
+	.visible .func _Z18blasDscal_internalidPdi (.param .s32 __cudaparmf1__Z18blasDscal_internalidPdi, .param .f64 __cudaparmf2__Z18blasDscal_internalidPdi, .param .u64 __cudaparmf3__Z18blasDscal_internalidPdi, .param .s32 __cudaparmf4__Z18blasDscal_internalidPdi)
+	{
+	.reg .u32 %r<24>;
+	.reg .u64 %rd<7>;
+	.reg .f64 %fd<6>;
+	.reg .pred %p<3>;
+	.loc	2	367	0
+$LDWbegin__Z18blasDscal_internalidPdi:
+	ld.param.u32 	%r1, [__cudaparmf1__Z18blasDscal_internalidPdi];
+	mov.s32 	%r2, %r1;
+	ld.param.f64 	%fd1, [__cudaparmf2__Z18blasDscal_internalidPdi];
+	mov.f64 	%fd2, %fd1;
+	ld.param.u64 	%rd1, [__cudaparmf3__Z18blasDscal_internalidPdi];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r3, [__cudaparmf4__Z18blasDscal_internalidPdi];
+	mov.s32 	%r4, %r3;
+	mov.u32 	%r5, %ctaid.x;
+	mov.u32 	%r6, %ntid.x;
+	mul.lo.u32 	%r7, %r5, %r6;
+	mov.u32 	%r8, %tid.x;
+	add.u32 	%r9, %r8, %r7;
+	mov.u32 	%r10, %tid.y;
+	mov.u32 	%r11, %ctaid.y;
+	mov.u32 	%r12, %ntid.y;
+	mul.lo.u32 	%r13, %r11, %r12;
+	add.u32 	%r14, %r10, %r13;
+	mov.s32 	%r15, 0;
+	set.eq.u32.s32 	%r16, %r14, %r15;
+	neg.s32 	%r17, %r16;
+	set.gt.u32.s32 	%r18, %r2, %r9;
+	neg.s32 	%r19, %r18;
+	and.b32 	%r20, %r17, %r19;
+	mov.u32 	%r21, 0;
+	setp.eq.s32 	%p1, %r20, %r21;
+	@%p1 bra 	$Lt_3_1282;
+	.loc	2	381	0
+	mul.lo.s32 	%r22, %r4, %r9;
+	cvt.s64.s32 	%rd3, %r22;
+	mul.wide.s32 	%rd4, %r22, 8;
+	add.u64 	%rd5, %rd2, %rd4;
+	ld.f64 	%fd3, [%rd5+0];
+	mul.f64 	%fd4, %fd3, %fd2;
+	st.f64 	[%rd5+0], %fd4;
+$Lt_3_1282:
+	.loc	2	384	0
+	ret;
+$LDWend__Z18blasDscal_internalidPdi:
+	} // _Z18blasDscal_internalidPdi
+
+	.visible .func _Z17blasDger_internaliidPKdiS0_iPdi (.param .s32 __cudaparmf1__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf2__Z17blasDger_internaliidPKdiS0_iPdi, .param .f64 __cudaparmf3__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf4__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf5__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf6__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf7__Z17blasDger_internaliidPKdiS0_iPdi, .param .u64 __cudaparmf8__Z17blasDger_internaliidPKdiS0_iPdi, .param .s32 __cudaparmf9__Z17blasDger_internaliidPKdiS0_iPdi)
+	{
+	.reg .u32 %r<32>;
+	.reg .u64 %rd<17>;
+	.reg .f64 %fd<9>;
+	.reg .pred %p<3>;
+	.loc	2	459	0
+$LDWbegin__Z17blasDger_internaliidPKdiS0_iPdi:
+	ld.param.u32 	%r1, [__cudaparmf1__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s32 	%r2, %r1;
+	ld.param.u32 	%r3, [__cudaparmf2__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s32 	%r4, %r3;
+	ld.param.f64 	%fd1, [__cudaparmf3__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.f64 	%fd2, %fd1;
+	ld.param.u64 	%rd1, [__cudaparmf4__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r5, [__cudaparmf5__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s32 	%r6, %r5;
+	ld.param.u64 	%rd3, [__cudaparmf6__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s64 	%rd4, %rd3;
+	ld.param.u32 	%r7, [__cudaparmf7__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s32 	%r8, %r7;
+	ld.param.u64 	%rd5, [__cudaparmf8__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s64 	%rd6, %rd5;
+	ld.param.u32 	%r9, [__cudaparmf9__Z17blasDger_internaliidPKdiS0_iPdi];
+	mov.s32 	%r10, %r9;
+	mov.u32 	%r11, %ctaid.x;
+	mov.u32 	%r12, %ntid.x;
+	mul.lo.u32 	%r13, %r11, %r12;
+	mov.u32 	%r14, %ctaid.y;
+	mov.u32 	%r15, %ntid.y;
+	mul.lo.u32 	%r16, %r14, %r15;
+	mov.u32 	%r17, %tid.x;
+	add.u32 	%r18, %r17, %r13;
+	mov.u32 	%r19, %tid.y;
+	add.u32 	%r20, %r19, %r16;
+	set.gt.u32.s32 	%r21, %r2, %r18;
+	neg.s32 	%r22, %r21;
+	set.gt.u32.s32 	%r23, %r4, %r20;
+	neg.s32 	%r24, %r23;
+	and.b32 	%r25, %r22, %r24;
+	mov.u32 	%r26, 0;
+	setp.eq.s32 	%p1, %r25, %r26;
+	@%p1 bra 	$Lt_4_1282;
+	.loc	2	494	0
+	mul.lo.s32 	%r27, %r10, %r20;
+	add.s32 	%r28, %r18, %r27;
+	cvt.s64.s32 	%rd7, %r28;
+	mul.wide.s32 	%rd8, %r28, 8;
+	add.u64 	%rd9, %rd6, %rd8;
+	ld.f64 	%fd3, [%rd9+0];
+	mul.lo.s32 	%r29, %r8, %r20;
+	cvt.s64.s32 	%rd10, %r29;
+	mul.wide.s32 	%rd11, %r29, 8;
+	add.u64 	%rd12, %rd4, %rd11;
+	ld.f64 	%fd4, [%rd12+0];
+	mul.lo.s32 	%r30, %r6, %r18;
+	cvt.s64.s32 	%rd13, %r30;
+	mul.wide.s32 	%rd14, %r30, 8;
+	add.u64 	%rd15, %rd2, %rd14;
+	ld.f64 	%fd5, [%rd15+0];
+	mul.f64 	%fd6, %fd5, %fd2;
+	mad.rn.f64 	%fd7, %fd4, %fd6, %fd3;
+	st.f64 	[%rd9+0], %fd7;
+$Lt_4_1282:
+	.loc	2	510	0
+	ret;
+$LDWend__Z17blasDger_internaliidPKdiS0_iPdi:
+	} // _Z17blasDger_internaliidPKdiS0_iPdi
+
+	.visible .func _Z18blasDnrm2_internaliPKdiPd (.param .s32 __cudaparmf1__Z18blasDnrm2_internaliPKdiPd, .param .u64 __cudaparmf2__Z18blasDnrm2_internaliPKdiPd, .param .s32 __cudaparmf3__Z18blasDnrm2_internaliPKdiPd, .param .u64 __cudaparmf4__Z18blasDnrm2_internaliPKdiPd)
+	{
+	.reg .u32 %r<28>;
+	.reg .u64 %rd<9>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<5>;
+	.loc	2	612	0
+$LDWbegin__Z18blasDnrm2_internaliPKdiPd:
+	ld.param.u32 	%r1, [__cudaparmf1__Z18blasDnrm2_internaliPKdiPd];
+	mov.s32 	%r2, %r1;
+	ld.param.u64 	%rd1, [__cudaparmf2__Z18blasDnrm2_internaliPKdiPd];
+	mov.s64 	%rd2, %rd1;
+	ld.param.u32 	%r3, [__cudaparmf3__Z18blasDnrm2_internaliPKdiPd];
+	mov.s32 	%r4, %r3;
+	ld.param.u64 	%rd3, [__cudaparmf4__Z18blasDnrm2_internaliPKdiPd];
+	mov.s64 	%rd4, %rd3;
+	mov.u32 	%r5, %tid.x;
+	mov.u32 	%r6, %ctaid.x;
+	mov.u32 	%r7, %ntid.x;
+	mul.lo.u32 	%r8, %r6, %r7;
+	add.u32 	%r9, %r5, %r8;
+	mov.s32 	%r10, 0;
+	set.eq.u32.s32 	%r11, %r9, %r10;
+	neg.s32 	%r12, %r11;
+	mov.u32 	%r13, %tid.y;
+	mov.u32 	%r14, %ctaid.y;
+	mov.u32 	%r15, %ntid.y;
+	mul.lo.u32 	%r16, %r14, %r15;
+	add.u32 	%r17, %r13, %r16;
+	mov.s32 	%r18, 0;
+	set.eq.u32.s32 	%r19, %r17, %r18;
+	neg.s32 	%r20, %r19;
+	and.b32 	%r21, %r12, %r20;
+	mov.u32 	%r22, 0;
+	setp.eq.s32 	%p1, %r21, %r22;
+	@%p1 bra 	$Lt_5_2306;
+	mov.u32 	%r23, 0;
+	setp.le.s32 	%p2, %r2, %r23;
+	@%p2 bra 	$Lt_5_3842;
+	mov.s32 	%r24, %r2;
+	cvt.s64.s32 	%rd5, %r4;
+	mul.wide.s32 	%rd6, %r4, 8;
+	mov.s64 	%rd7, %rd2;
+	mov.s32 	%r25, 0;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	mov.s32 	%r26, %r24;
+$Lt_5_3330:
+ //<loop> Loop body line 612, nesting depth: 1, estimated iterations: unknown
+	.loc	2	628	0
+	ld.f64 	%fd2, [%rd7+0];
+	.loc	2	629	0
+	mad.rn.f64 	%fd1, %fd2, %fd2, %fd1;
+	add.s32 	%r25, %r25, 1;
+	add.u64 	%rd7, %rd6, %rd7;
+	setp.ne.s32 	%p3, %r2, %r25;
+	@%p3 bra 	$Lt_5_3330;
+	bra.uni 	$Lt_5_2818;
+$Lt_5_3842:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_5_2818:
+	.loc	2	632	0
+	sqrt.rn.f64 	%fd3, %fd1;
+	st.f64 	[%rd4+0], %fd3;
+$Lt_5_2306:
+	.loc	2	636	0
+	ret;
+$LDWend__Z18blasDnrm2_internaliPKdiPd:
+	} // _Z18blasDnrm2_internaliPKdiPd
+
+	.entry _Z9blasDcopyiPKdiPdi (
+		.param .s32 __cudaparm__Z9blasDcopyiPKdiPdi_n,
+		.param .u64 __cudaparm__Z9blasDcopyiPKdiPdi_x,
+		.param .s32 __cudaparm__Z9blasDcopyiPKdiPdi_incx,
+		.param .u64 __cudaparm__Z9blasDcopyiPKdiPdi_y,
+		.param .s32 __cudaparm__Z9blasDcopyiPKdiPdi_incy)
+	{
+	.reg .u32 %r<24>;
+	.reg .u64 %rd<10>;
+	.reg .f64 %fd<3>;
+	.reg .pred %p<3>;
+	.loc	2	53	0
+$LDWbegin__Z9blasDcopyiPKdiPdi:
+	.loc	2	55	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	mov.u32 	%r6, %tid.y;
+	mov.u32 	%r7, %ctaid.y;
+	mov.u32 	%r8, %ntid.y;
+	mul.lo.u32 	%r9, %r7, %r8;
+	add.u32 	%r10, %r6, %r9;
+	mov.s32 	%r11, 0;
+	set.eq.u32.s32 	%r12, %r10, %r11;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm__Z9blasDcopyiPKdiPdi_n];
+	set.gt.u32.s32 	%r15, %r14, %r5;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_6_1282;
+	.loc	2	48	0
+	ld.param.u64 	%rd1, [__cudaparm__Z9blasDcopyiPKdiPdi_x];
+	ld.param.s32 	%r19, [__cudaparm__Z9blasDcopyiPKdiPdi_incx];
+	mul.lo.s32 	%r20, %r19, %r5;
+	cvt.s64.s32 	%rd2, %r20;
+	mul.wide.s32 	%rd3, %r20, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.u64 	%rd5, [__cudaparm__Z9blasDcopyiPKdiPdi_y];
+	ld.param.s32 	%r21, [__cudaparm__Z9blasDcopyiPKdiPdi_incy];
+	mul.lo.s32 	%r22, %r21, %r5;
+	cvt.s64.s32 	%rd6, %r22;
+	mul.wide.s32 	%rd7, %r22, 8;
+	add.u64 	%rd8, %rd5, %rd7;
+	st.global.f64 	[%rd8+0], %fd1;
+$Lt_6_1282:
+	.loc	2	56	0
+	exit;
+$LDWend__Z9blasDcopyiPKdiPdi:
+	} // _Z9blasDcopyiPKdiPdi
+
+	.entry ptaskDcopy (
+		.param .u64 __cudaparm_ptaskDcopy_x,
+		.param .u64 __cudaparm_ptaskDcopy_y,
+		.param .align 4 .b8 __cudaparm_ptaskDcopy_params[20])
+	{
+	.reg .u32 %r<26>;
+	.reg .u64 %rd<16>;
+	.reg .f64 %fd<3>;
+	.reg .pred %p<3>;
+	.loc	2	70	0
+$LDWbegin_ptaskDcopy:
+	.loc	2	88	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	mov.u32 	%r6, %tid.y;
+	mov.u32 	%r7, %ctaid.y;
+	mov.u32 	%r8, %ntid.y;
+	mul.lo.u32 	%r9, %r7, %r8;
+	add.u32 	%r10, %r6, %r9;
+	mov.s32 	%r11, 0;
+	set.eq.u32.s32 	%r12, %r10, %r11;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm_ptaskDcopy_params+0];
+	set.gt.u32.s32 	%r15, %r14, %r5;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_7_1282;
+	.loc	2	48	0
+	ld.param.u64 	%rd1, [__cudaparm_ptaskDcopy_x];
+	ld.param.s32 	%r19, [__cudaparm_ptaskDcopy_params+4];
+	cvt.s64.s32 	%rd2, %r19;
+	mul.wide.s32 	%rd3, %r19, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.param.s32 	%r20, [__cudaparm_ptaskDcopy_params+12];
+	mul.lo.s32 	%r21, %r20, %r5;
+	cvt.s64.s32 	%rd5, %r21;
+	mul.wide.s32 	%rd6, %r21, 8;
+	add.u64 	%rd7, %rd4, %rd6;
+	ld.global.f64 	%fd1, [%rd7+0];
+	ld.param.u64 	%rd8, [__cudaparm_ptaskDcopy_y];
+	ld.param.s32 	%r22, [__cudaparm_ptaskDcopy_params+8];
+	cvt.s64.s32 	%rd9, %r22;
+	mul.wide.s32 	%rd10, %r22, 8;
+	add.u64 	%rd11, %rd8, %rd10;
+	ld.param.s32 	%r23, [__cudaparm_ptaskDcopy_params+16];
+	mul.lo.s32 	%r24, %r23, %r5;
+	cvt.s64.s32 	%rd12, %r24;
+	mul.wide.s32 	%rd13, %r24, 8;
+	add.u64 	%rd14, %rd11, %rd13;
+	st.global.f64 	[%rd14+0], %fd1;
+$Lt_7_1282:
+	.loc	2	103	0
+	exit;
+$LDWend_ptaskDcopy:
+	} // ptaskDcopy
+
+	.entry _Z9blasDaxpyidPKdiPdi (
+		.param .s32 __cudaparm__Z9blasDaxpyidPKdiPdi_n,
+		.param .f64 __cudaparm__Z9blasDaxpyidPKdiPdi_alpha,
+		.param .u64 __cudaparm__Z9blasDaxpyidPKdiPdi_x,
+		.param .s32 __cudaparm__Z9blasDaxpyidPKdiPdi_incx,
+		.param .u64 __cudaparm__Z9blasDaxpyidPKdiPdi_y,
+		.param .s32 __cudaparm__Z9blasDaxpyidPKdiPdi_incy)
+	{
+	.reg .u32 %r<24>;
+	.reg .u64 %rd<10>;
+	.reg .f64 %fd<6>;
+	.reg .pred %p<3>;
+	.loc	2	150	0
+$LDWbegin__Z9blasDaxpyidPKdiPdi:
+	.loc	2	152	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	mov.u32 	%r6, %tid.y;
+	mov.u32 	%r7, %ctaid.y;
+	mov.u32 	%r8, %ntid.y;
+	mul.lo.u32 	%r9, %r7, %r8;
+	add.u32 	%r10, %r6, %r9;
+	mov.s32 	%r11, 0;
+	set.eq.u32.s32 	%r12, %r10, %r11;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm__Z9blasDaxpyidPKdiPdi_n];
+	set.gt.u32.s32 	%r15, %r14, %r5;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_8_1282;
+	.loc	2	145	0
+	ld.param.u64 	%rd1, [__cudaparm__Z9blasDaxpyidPKdiPdi_y];
+	ld.param.s32 	%r19, [__cudaparm__Z9blasDaxpyidPKdiPdi_incy];
+	mul.lo.s32 	%r20, %r19, %r5;
+	cvt.s64.s32 	%rd2, %r20;
+	mul.wide.s32 	%rd3, %r20, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.u64 	%rd5, [__cudaparm__Z9blasDaxpyidPKdiPdi_x];
+	ld.param.s32 	%r21, [__cudaparm__Z9blasDaxpyidPKdiPdi_incx];
+	mul.lo.s32 	%r22, %r21, %r5;
+	cvt.s64.s32 	%rd6, %r22;
+	mul.wide.s32 	%rd7, %r22, 8;
+	add.u64 	%rd8, %rd5, %rd7;
+	ld.global.f64 	%fd2, [%rd8+0];
+	ld.param.f64 	%fd3, [__cudaparm__Z9blasDaxpyidPKdiPdi_alpha];
+	mad.rn.f64 	%fd4, %fd2, %fd3, %fd1;
+	st.global.f64 	[%rd4+0], %fd4;
+$Lt_8_1282:
+	.loc	2	153	0
+	exit;
+$LDWend__Z9blasDaxpyidPKdiPdi:
+	} // _Z9blasDaxpyidPKdiPdi
+
+	.entry ptaskDaxpy (
+		.param .u64 __cudaparm_ptaskDaxpy_x,
+		.param .u64 __cudaparm_ptaskDaxpy_y,
+		.param .align 8 .b8 __cudaparm_ptaskDaxpy_params[32])
+	{
+	.reg .u32 %r<26>;
+	.reg .u64 %rd<16>;
+	.reg .f64 %fd<6>;
+	.reg .pred %p<3>;
+	.loc	2	168	0
+$LDWbegin_ptaskDaxpy:
+	.loc	2	170	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	mov.u32 	%r6, %tid.y;
+	mov.u32 	%r7, %ctaid.y;
+	mov.u32 	%r8, %ntid.y;
+	mul.lo.u32 	%r9, %r7, %r8;
+	add.u32 	%r10, %r6, %r9;
+	mov.s32 	%r11, 0;
+	set.eq.u32.s32 	%r12, %r10, %r11;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm_ptaskDaxpy_params+0];
+	set.gt.u32.s32 	%r15, %r14, %r5;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_9_1282;
+	.loc	2	145	0
+	ld.param.u64 	%rd1, [__cudaparm_ptaskDaxpy_y];
+	ld.param.s32 	%r19, [__cudaparm_ptaskDaxpy_params+20];
+	cvt.s64.s32 	%rd2, %r19;
+	mul.wide.s32 	%rd3, %r19, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.param.s32 	%r20, [__cudaparm_ptaskDaxpy_params+28];
+	mul.lo.s32 	%r21, %r20, %r5;
+	cvt.s64.s32 	%rd5, %r21;
+	mul.wide.s32 	%rd6, %r21, 8;
+	add.u64 	%rd7, %rd4, %rd6;
+	ld.global.f64 	%fd1, [%rd7+0];
+	ld.param.u64 	%rd8, [__cudaparm_ptaskDaxpy_x];
+	ld.param.s32 	%r22, [__cudaparm_ptaskDaxpy_params+16];
+	cvt.s64.s32 	%rd9, %r22;
+	mul.wide.s32 	%rd10, %r22, 8;
+	add.u64 	%rd11, %rd8, %rd10;
+	ld.param.s32 	%r23, [__cudaparm_ptaskDaxpy_params+24];
+	mul.lo.s32 	%r24, %r23, %r5;
+	cvt.s64.s32 	%rd12, %r24;
+	mul.wide.s32 	%rd13, %r24, 8;
+	add.u64 	%rd14, %rd11, %rd13;
+	ld.global.f64 	%fd2, [%rd14+0];
+	ld.param.f64 	%fd3, [__cudaparm_ptaskDaxpy_params+8];
+	mad.rn.f64 	%fd4, %fd2, %fd3, %fd1;
+	st.global.f64 	[%rd7+0], %fd4;
+$Lt_9_1282:
+	.loc	2	171	0
+	exit;
+$LDWend_ptaskDaxpy:
+	} // ptaskDaxpy
+
+	.entry _Z9blasDgemvbiidPKdiS0_idPdi (
+		.param .s8 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_transpose,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_m,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_n,
+		.param .f64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_alpha,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_A,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_lda,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_x,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_incx,
+		.param .f64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_beta,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_y,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_incy)
+	{
+	.reg .u32 %r<42>;
+	.reg .u64 %rd<28>;
+	.reg .f64 %fd<15>;
+	.reg .pred %p<9>;
+	.loc	2	304	0
+$LDWbegin__Z9blasDgemvbiidPKdiS0_idPdi:
+	.loc	2	306	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_m];
+	ld.param.s32 	%r7, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_n];
+	ld.param.s8 	%r8, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_transpose];
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	mov.s32 	%r17, 1;
+	setp.eq.s32 	%p1, %r8, %r17;
+	selp.s32 	%r18, %r7, %r6, %p1;
+	set.gt.u32.s32 	%r19, %r18, %r5;
+	neg.s32 	%r20, %r19;
+	and.b32 	%r21, %r16, %r20;
+	mov.u32 	%r22, 0;
+	setp.eq.s32 	%p2, %r21, %r22;
+	@%p2 bra 	$Lt_10_4866;
+	.loc	2	260	0
+	ld.param.u64 	%rd1, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_y];
+	ld.param.s32 	%r23, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_incy];
+	mul.lo.s32 	%r24, %r23, %r5;
+	cvt.s64.s32 	%rd2, %r24;
+	mul.wide.s32 	%rd3, %r24, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.f64 	%fd2, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_beta];
+	mul.f64 	%fd3, %fd1, %fd2;
+	ld.param.u64 	%rd5, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_x];
+	ld.global.f64 	%fd4, [%rd5+0];
+	ld.param.f64 	%fd5, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_alpha];
+	ld.param.u64 	%rd6, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_A];
+	mov.u32 	%r25, 0;
+	setp.ne.s32 	%p3, %r8, %r25;
+	@%p3 bra 	$Lt_10_5634;
+	.loc	2	264	0
+	cvt.s64.s32 	%rd7, %r5;
+	mul.wide.s32 	%rd8, %r5, 8;
+	add.u64 	%rd9, %rd6, %rd8;
+	ld.global.f64 	%fd6, [%rd9+0];
+	mul.f64 	%fd7, %fd6, %fd4;
+	mov.u32 	%r26, 1;
+	setp.le.s32 	%p4, %r7, %r26;
+	@%p4 bra 	$Lt_10_5890;
+	sub.s32 	%r27, %r7, 1;
+	ld.param.s32 	%r28, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_lda];
+	ld.param.s32 	%r29, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_incx];
+	cvt.s64.s32 	%rd10, %r29;
+	mul.wide.s32 	%rd11, %r29, 8;
+	add.u64 	%rd12, %rd11, %rd5;
+	cvt.s64.s32 	%rd13, %r28;
+	mul.wide.s32 	%rd14, %r28, 8;
+	add.s32 	%r30, %r28, %r5;
+	cvt.s64.s32 	%rd15, %r30;
+	mul.wide.s32 	%rd16, %r30, 8;
+	add.u64 	%rd17, %rd6, %rd16;
+	mov.s32 	%r31, 1;
+	mov.s32 	%r32, %r27;
+$Lt_10_6402:
+ //<loop> Loop body line 264, nesting depth: 1, estimated iterations: unknown
+	.loc	2	267	0
+	ld.global.f64 	%fd8, [%rd17+0];
+	ld.global.f64 	%fd9, [%rd12+0];
+	mad.rn.f64 	%fd7, %fd8, %fd9, %fd7;
+	add.s32 	%r31, %r31, 1;
+	add.u64 	%rd12, %rd12, %rd11;
+	add.u64 	%rd17, %rd14, %rd17;
+	setp.ne.s32 	%p5, %r31, %r7;
+	@%p5 bra 	$Lt_10_6402;
+$Lt_10_5890:
+	.loc	2	269	0
+	mad.rn.f64 	%fd3, %fd7, %fd5, %fd3;
+	bra.uni 	$Lt_10_5378;
+$Lt_10_5634:
+	.loc	2	272	0
+	ld.param.s32 	%r33, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_lda];
+	mul.lo.s32 	%r34, %r33, %r5;
+	cvt.s64.s32 	%rd18, %r34;
+	mul.wide.s32 	%rd19, %r34, 8;
+	add.u64 	%rd20, %rd6, %rd19;
+	ld.global.f64 	%fd10, [%rd20+0];
+	mul.f64 	%fd11, %fd10, %fd4;
+	mov.u32 	%r35, 1;
+	setp.le.s32 	%p6, %r6, %r35;
+	@%p6 bra 	$Lt_10_6914;
+	sub.s32 	%r36, %r6, 1;
+	ld.param.s32 	%r37, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdi_incx];
+	cvt.s64.s32 	%rd21, %r37;
+	mul.wide.s32 	%rd22, %r37, 8;
+	add.s32 	%r38, %r34, 1;
+	add.s32 	%r39, %r34, %r6;
+	add.u64 	%rd23, %rd22, %rd5;
+	cvt.s64.s32 	%rd24, %r38;
+	mul.wide.s32 	%rd25, %r38, 8;
+	add.u64 	%rd26, %rd6, %rd25;
+	mov.s32 	%r40, %r36;
+$Lt_10_7426:
+ //<loop> Loop body line 272, nesting depth: 1, estimated iterations: unknown
+	.loc	2	277	0
+	ld.global.f64 	%fd12, [%rd26+0];
+	ld.global.f64 	%fd13, [%rd23+0];
+	mad.rn.f64 	%fd11, %fd12, %fd13, %fd11;
+	add.s32 	%r38, %r38, 1;
+	add.u64 	%rd26, %rd26, 8;
+	add.u64 	%rd23, %rd23, %rd22;
+	setp.ne.s32 	%p7, %r38, %r39;
+	@%p7 bra 	$Lt_10_7426;
+$Lt_10_6914:
+	.loc	2	280	0
+	mad.rn.f64 	%fd3, %fd11, %fd5, %fd3;
+$Lt_10_5378:
+	.loc	2	283	0
+	st.global.f64 	[%rd4+0], %fd3;
+$Lt_10_4866:
+	.loc	2	307	0
+	exit;
+$LDWend__Z9blasDgemvbiidPKdiS0_idPdi:
+	} // _Z9blasDgemvbiidPKdiS0_idPdi
+
+	.entry _Z9blasDgemvbiidPKdiS0_idPdib (
+		.param .s8 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_transpose,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_m,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_n,
+		.param .f64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_alpha,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_A,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_lda,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_x,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_incx,
+		.param .f64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_beta,
+		.param .u64 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_y,
+		.param .s32 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_incy,
+		.param .s8 __cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_debug)
+	{
+	.reg .u32 %r<42>;
+	.reg .u64 %rd<28>;
+	.reg .f64 %fd<15>;
+	.reg .pred %p<9>;
+	.loc	2	312	0
+$LDWbegin__Z9blasDgemvbiidPKdiS0_idPdib:
+	.loc	2	314	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_m];
+	ld.param.s32 	%r7, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_n];
+	ld.param.s8 	%r8, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_transpose];
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	mov.s32 	%r17, 1;
+	setp.eq.s32 	%p1, %r8, %r17;
+	selp.s32 	%r18, %r7, %r6, %p1;
+	set.gt.u32.s32 	%r19, %r18, %r5;
+	neg.s32 	%r20, %r19;
+	and.b32 	%r21, %r16, %r20;
+	mov.u32 	%r22, 0;
+	setp.eq.s32 	%p2, %r21, %r22;
+	@%p2 bra 	$Lt_11_4866;
+	.loc	2	260	0
+	ld.param.u64 	%rd1, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_y];
+	ld.param.s32 	%r23, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_incy];
+	mul.lo.s32 	%r24, %r23, %r5;
+	cvt.s64.s32 	%rd2, %r24;
+	mul.wide.s32 	%rd3, %r24, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.f64 	%fd2, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_beta];
+	mul.f64 	%fd3, %fd1, %fd2;
+	ld.param.u64 	%rd5, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_x];
+	ld.global.f64 	%fd4, [%rd5+0];
+	ld.param.f64 	%fd5, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_alpha];
+	ld.param.u64 	%rd6, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_A];
+	mov.u32 	%r25, 0;
+	setp.ne.s32 	%p3, %r8, %r25;
+	@%p3 bra 	$Lt_11_5634;
+	.loc	2	264	0
+	cvt.s64.s32 	%rd7, %r5;
+	mul.wide.s32 	%rd8, %r5, 8;
+	add.u64 	%rd9, %rd6, %rd8;
+	ld.global.f64 	%fd6, [%rd9+0];
+	mul.f64 	%fd7, %fd6, %fd4;
+	mov.u32 	%r26, 1;
+	setp.le.s32 	%p4, %r7, %r26;
+	@%p4 bra 	$Lt_11_5890;
+	sub.s32 	%r27, %r7, 1;
+	ld.param.s32 	%r28, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_lda];
+	ld.param.s32 	%r29, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_incx];
+	cvt.s64.s32 	%rd10, %r29;
+	mul.wide.s32 	%rd11, %r29, 8;
+	add.u64 	%rd12, %rd11, %rd5;
+	cvt.s64.s32 	%rd13, %r28;
+	mul.wide.s32 	%rd14, %r28, 8;
+	add.s32 	%r30, %r28, %r5;
+	cvt.s64.s32 	%rd15, %r30;
+	mul.wide.s32 	%rd16, %r30, 8;
+	add.u64 	%rd17, %rd6, %rd16;
+	mov.s32 	%r31, 1;
+	mov.s32 	%r32, %r27;
+$Lt_11_6402:
+ //<loop> Loop body line 264, nesting depth: 1, estimated iterations: unknown
+	.loc	2	267	0
+	ld.global.f64 	%fd8, [%rd17+0];
+	ld.global.f64 	%fd9, [%rd12+0];
+	mad.rn.f64 	%fd7, %fd8, %fd9, %fd7;
+	add.s32 	%r31, %r31, 1;
+	add.u64 	%rd12, %rd12, %rd11;
+	add.u64 	%rd17, %rd14, %rd17;
+	setp.ne.s32 	%p5, %r31, %r7;
+	@%p5 bra 	$Lt_11_6402;
+$Lt_11_5890:
+	.loc	2	269	0
+	mad.rn.f64 	%fd3, %fd7, %fd5, %fd3;
+	bra.uni 	$Lt_11_5378;
+$Lt_11_5634:
+	.loc	2	272	0
+	ld.param.s32 	%r33, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_lda];
+	mul.lo.s32 	%r34, %r33, %r5;
+	cvt.s64.s32 	%rd18, %r34;
+	mul.wide.s32 	%rd19, %r34, 8;
+	add.u64 	%rd20, %rd6, %rd19;
+	ld.global.f64 	%fd10, [%rd20+0];
+	mul.f64 	%fd11, %fd10, %fd4;
+	mov.u32 	%r35, 1;
+	setp.le.s32 	%p6, %r6, %r35;
+	@%p6 bra 	$Lt_11_6914;
+	sub.s32 	%r36, %r6, 1;
+	ld.param.s32 	%r37, [__cudaparm__Z9blasDgemvbiidPKdiS0_idPdib_incx];
+	cvt.s64.s32 	%rd21, %r37;
+	mul.wide.s32 	%rd22, %r37, 8;
+	add.s32 	%r38, %r34, 1;
+	add.s32 	%r39, %r34, %r6;
+	add.u64 	%rd23, %rd22, %rd5;
+	cvt.s64.s32 	%rd24, %r38;
+	mul.wide.s32 	%rd25, %r38, 8;
+	add.u64 	%rd26, %rd6, %rd25;
+	mov.s32 	%r40, %r36;
+$Lt_11_7426:
+ //<loop> Loop body line 272, nesting depth: 1, estimated iterations: unknown
+	.loc	2	277	0
+	ld.global.f64 	%fd12, [%rd26+0];
+	ld.global.f64 	%fd13, [%rd23+0];
+	mad.rn.f64 	%fd11, %fd12, %fd13, %fd11;
+	add.s32 	%r38, %r38, 1;
+	add.u64 	%rd26, %rd26, 8;
+	add.u64 	%rd23, %rd23, %rd22;
+	setp.ne.s32 	%p7, %r38, %r39;
+	@%p7 bra 	$Lt_11_7426;
+$Lt_11_6914:
+	.loc	2	280	0
+	mad.rn.f64 	%fd3, %fd11, %fd5, %fd3;
+$Lt_11_5378:
+	.loc	2	283	0
+	st.global.f64 	[%rd4+0], %fd3;
+$Lt_11_4866:
+	.loc	2	315	0
+	exit;
+$LDWend__Z9blasDgemvbiidPKdiS0_idPdib:
+	} // _Z9blasDgemvbiidPKdiS0_idPdib
+
+	.entry ptaskDgemv (
+		.param .u64 __cudaparm_ptaskDgemv_A,
+		.param .u64 __cudaparm_ptaskDgemv_x,
+		.param .u64 __cudaparm_ptaskDgemv_y,
+		.param .align 8 .b8 __cudaparm_ptaskDgemv_params[56])
+	{
+	.reg .u32 %r<44>;
+	.reg .u64 %rd<34>;
+	.reg .f64 %fd<15>;
+	.reg .pred %p<9>;
+	.loc	2	334	0
+$LDWbegin_ptaskDgemv:
+	.loc	2	336	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	ld.param.s32 	%r6, [__cudaparm_ptaskDgemv_params+4];
+	ld.param.s32 	%r7, [__cudaparm_ptaskDgemv_params+8];
+	ld.param.s8 	%r8, [__cudaparm_ptaskDgemv_params+0];
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	mov.s32 	%r17, 1;
+	setp.eq.s32 	%p1, %r8, %r17;
+	selp.s32 	%r18, %r7, %r6, %p1;
+	set.gt.u32.s32 	%r19, %r18, %r5;
+	neg.s32 	%r20, %r19;
+	and.b32 	%r21, %r16, %r20;
+	mov.u32 	%r22, 0;
+	setp.eq.s32 	%p2, %r21, %r22;
+	@%p2 bra 	$Lt_12_4866;
+	.loc	2	260	0
+	ld.param.u64 	%rd1, [__cudaparm_ptaskDgemv_y];
+	ld.param.s32 	%r23, [__cudaparm_ptaskDgemv_params+40];
+	cvt.s64.s32 	%rd2, %r23;
+	mul.wide.s32 	%rd3, %r23, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.param.s32 	%r24, [__cudaparm_ptaskDgemv_params+48];
+	mul.lo.s32 	%r25, %r24, %r5;
+	cvt.s64.s32 	%rd5, %r25;
+	mul.wide.s32 	%rd6, %r25, 8;
+	add.u64 	%rd7, %rd4, %rd6;
+	ld.global.f64 	%fd1, [%rd7+0];
+	ld.param.f64 	%fd2, [__cudaparm_ptaskDgemv_params+24];
+	mul.f64 	%fd3, %fd1, %fd2;
+	ld.param.u64 	%rd8, [__cudaparm_ptaskDgemv_x];
+	ld.param.s32 	%r26, [__cudaparm_ptaskDgemv_params+36];
+	cvt.s64.s32 	%rd9, %r26;
+	mul.wide.s32 	%rd10, %r26, 8;
+	add.u64 	%rd11, %rd8, %rd10;
+	ld.global.f64 	%fd4, [%rd11+0];
+	ld.param.f64 	%fd5, [__cudaparm_ptaskDgemv_params+16];
+	ld.param.u64 	%rd12, [__cudaparm_ptaskDgemv_A];
+	mov.u32 	%r27, 0;
+	setp.ne.s32 	%p3, %r8, %r27;
+	@%p3 bra 	$Lt_12_5634;
+	.loc	2	264	0
+	cvt.s64.s32 	%rd13, %r5;
+	mul.wide.s32 	%rd14, %r5, 8;
+	add.u64 	%rd15, %rd12, %rd14;
+	ld.global.f64 	%fd6, [%rd15+0];
+	mul.f64 	%fd7, %fd6, %fd4;
+	mov.u32 	%r28, 1;
+	setp.le.s32 	%p4, %r7, %r28;
+	@%p4 bra 	$Lt_12_5890;
+	sub.s32 	%r29, %r7, 1;
+	ld.param.s32 	%r30, [__cudaparm_ptaskDgemv_params+32];
+	ld.param.s32 	%r31, [__cudaparm_ptaskDgemv_params+44];
+	cvt.s64.s32 	%rd16, %r31;
+	mul.wide.s32 	%rd17, %r31, 8;
+	add.s64 	%rd18, %rd17, %rd11;
+	cvt.s64.s32 	%rd19, %r30;
+	mul.wide.s32 	%rd20, %r30, 8;
+	add.s32 	%r32, %r30, %r5;
+	cvt.s64.s32 	%rd21, %r32;
+	mul.wide.s32 	%rd22, %r32, 8;
+	add.u64 	%rd23, %rd12, %rd22;
+	mov.s32 	%r33, 1;
+	mov.s32 	%r34, %r29;
+$Lt_12_6402:
+ //<loop> Loop body line 264, nesting depth: 1, estimated iterations: unknown
+	.loc	2	267	0
+	ld.global.f64 	%fd8, [%rd23+0];
+	ld.global.f64 	%fd9, [%rd18+0];
+	mad.rn.f64 	%fd7, %fd8, %fd9, %fd7;
+	add.s32 	%r33, %r33, 1;
+	add.s64 	%rd18, %rd18, %rd17;
+	add.u64 	%rd23, %rd20, %rd23;
+	setp.ne.s32 	%p5, %r33, %r7;
+	@%p5 bra 	$Lt_12_6402;
+$Lt_12_5890:
+	.loc	2	269	0
+	mad.rn.f64 	%fd3, %fd7, %fd5, %fd3;
+	bra.uni 	$Lt_12_5378;
+$Lt_12_5634:
+	.loc	2	272	0
+	ld.param.s32 	%r35, [__cudaparm_ptaskDgemv_params+32];
+	mul.lo.s32 	%r36, %r35, %r5;
+	cvt.s64.s32 	%rd24, %r36;
+	mul.wide.s32 	%rd25, %r36, 8;
+	add.u64 	%rd26, %rd12, %rd25;
+	ld.global.f64 	%fd10, [%rd26+0];
+	mul.f64 	%fd11, %fd10, %fd4;
+	mov.u32 	%r37, 1;
+	setp.le.s32 	%p6, %r6, %r37;
+	@%p6 bra 	$Lt_12_6914;
+	sub.s32 	%r38, %r6, 1;
+	ld.param.s32 	%r39, [__cudaparm_ptaskDgemv_params+44];
+	cvt.s64.s32 	%rd27, %r39;
+	mul.wide.s32 	%rd28, %r39, 8;
+	add.s32 	%r40, %r36, 1;
+	add.s32 	%r41, %r36, %r6;
+	add.s64 	%rd29, %rd28, %rd11;
+	cvt.s64.s32 	%rd30, %r40;
+	mul.wide.s32 	%rd31, %r40, 8;
+	add.u64 	%rd32, %rd12, %rd31;
+	mov.s32 	%r42, %r38;
+$Lt_12_7426:
+ //<loop> Loop body line 272, nesting depth: 1, estimated iterations: unknown
+	.loc	2	277	0
+	ld.global.f64 	%fd12, [%rd32+0];
+	ld.global.f64 	%fd13, [%rd29+0];
+	mad.rn.f64 	%fd11, %fd12, %fd13, %fd11;
+	add.s32 	%r40, %r40, 1;
+	add.u64 	%rd32, %rd32, 8;
+	add.s64 	%rd29, %rd29, %rd28;
+	setp.ne.s32 	%p7, %r40, %r41;
+	@%p7 bra 	$Lt_12_7426;
+$Lt_12_6914:
+	.loc	2	280	0
+	mad.rn.f64 	%fd3, %fd11, %fd5, %fd3;
+$Lt_12_5378:
+	.loc	2	283	0
+	st.global.f64 	[%rd7+0], %fd3;
+$Lt_12_4866:
+	.loc	2	340	0
+	exit;
+$LDWend_ptaskDgemv:
+	} // ptaskDgemv
+
+	.entry _Z9blasDscalidPdi (
+		.param .s32 __cudaparm__Z9blasDscalidPdi_n,
+		.param .f64 __cudaparm__Z9blasDscalidPdi_alpha,
+		.param .u64 __cudaparm__Z9blasDscalidPdi_x,
+		.param .s32 __cudaparm__Z9blasDscalidPdi_incx)
+	{
+	.reg .u32 %r<22>;
+	.reg .u64 %rd<6>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<3>;
+	.loc	2	387	0
+$LDWbegin__Z9blasDscalidPdi:
+	.loc	2	389	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	mov.u32 	%r6, %tid.y;
+	mov.u32 	%r7, %ctaid.y;
+	mov.u32 	%r8, %ntid.y;
+	mul.lo.u32 	%r9, %r7, %r8;
+	add.u32 	%r10, %r6, %r9;
+	mov.s32 	%r11, 0;
+	set.eq.u32.s32 	%r12, %r10, %r11;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm__Z9blasDscalidPdi_n];
+	set.gt.u32.s32 	%r15, %r14, %r5;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_13_1282;
+	.loc	2	381	0
+	ld.param.u64 	%rd1, [__cudaparm__Z9blasDscalidPdi_x];
+	ld.param.s32 	%r19, [__cudaparm__Z9blasDscalidPdi_incx];
+	mul.lo.s32 	%r20, %r19, %r5;
+	cvt.s64.s32 	%rd2, %r20;
+	mul.wide.s32 	%rd3, %r20, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.f64 	%fd2, [__cudaparm__Z9blasDscalidPdi_alpha];
+	mul.f64 	%fd3, %fd1, %fd2;
+	st.global.f64 	[%rd4+0], %fd3;
+$Lt_13_1282:
+	.loc	2	390	0
+	exit;
+$LDWend__Z9blasDscalidPdi:
+	} // _Z9blasDscalidPdi
+
+	.entry ptaskDscal (
+		.param .u64 __cudaparm_ptaskDscal_alpha_var,
+		.param .u64 __cudaparm_ptaskDscal_x,
+		.param .align 8 .b8 __cudaparm_ptaskDscal_params[32])
+	{
+	.reg .u32 %r<26>;
+	.reg .u64 %rd<13>;
+	.reg .f64 %fd<7>;
+	.reg .pred %p<4>;
+	.loc	2	405	0
+$LDWbegin_ptaskDscal:
+	ld.param.u64 	%rd1, [__cudaparm_ptaskDscal_alpha_var];
+	ld.param.s32 	%r1, [__cudaparm_ptaskDscal_params+24];
+	cvt.s64.s32 	%rd2, %r1;
+	mul.wide.s32 	%rd3, %r1, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ldu.global.f64 	%fd1, [%rd4+0];
+	ld.param.f64 	%fd2, [__cudaparm_ptaskDscal_params+8];
+	ld.param.s8 	%r2, [__cudaparm_ptaskDscal_params+28];
+	mov.u32 	%r3, 0;
+	setp.eq.s32 	%p1, %r2, %r3;
+	@%p1 bra 	$Lt_14_2306;
+	.loc	2	412	0
+	div.rn.f64 	%fd3, %fd2, %fd1;
+	bra.uni 	$Lt_14_2050;
+$Lt_14_2306:
+	.loc	2	414	0
+	mul.f64 	%fd3, %fd1, %fd2;
+$Lt_14_2050:
+	.loc	2	422	0
+	mov.u32 	%r4, %ctaid.x;
+	mov.u32 	%r5, %ntid.x;
+	mul.lo.u32 	%r6, %r4, %r5;
+	mov.u32 	%r7, %tid.x;
+	add.u32 	%r8, %r7, %r6;
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	ld.param.s32 	%r17, [__cudaparm_ptaskDscal_params+0];
+	set.gt.u32.s32 	%r18, %r17, %r8;
+	neg.s32 	%r19, %r18;
+	and.b32 	%r20, %r16, %r19;
+	mov.u32 	%r21, 0;
+	setp.eq.s32 	%p2, %r20, %r21;
+	@%p2 bra 	$Lt_14_2562;
+	.loc	2	381	0
+	ld.param.u64 	%rd5, [__cudaparm_ptaskDscal_x];
+	ld.param.s32 	%r22, [__cudaparm_ptaskDscal_params+20];
+	cvt.s64.s32 	%rd6, %r22;
+	mul.wide.s32 	%rd7, %r22, 8;
+	add.u64 	%rd8, %rd5, %rd7;
+	ld.param.s32 	%r23, [__cudaparm_ptaskDscal_params+16];
+	mul.lo.s32 	%r24, %r23, %r8;
+	cvt.s64.s32 	%rd9, %r24;
+	mul.wide.s32 	%rd10, %r24, 8;
+	add.u64 	%rd11, %rd8, %rd10;
+	ld.global.f64 	%fd4, [%rd11+0];
+	mul.f64 	%fd5, %fd4, %fd3;
+	st.global.f64 	[%rd11+0], %fd5;
+$Lt_14_2562:
+	.loc	2	424	0
+	exit;
+$LDWend_ptaskDscal:
+	} // ptaskDscal
+
+	.entry _Z8blasDgeriidPKdiS0_iPdi (
+		.param .s32 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_m,
+		.param .s32 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_n,
+		.param .f64 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_alpha,
+		.param .u64 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_x,
+		.param .s32 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_incx,
+		.param .u64 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_y,
+		.param .s32 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_incy,
+		.param .u64 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_A,
+		.param .s32 __cudaparm__Z8blasDgeriidPKdiS0_iPdi_lda)
+	{
+	.reg .u32 %r<27>;
+	.reg .u64 %rd<14>;
+	.reg .f64 %fd<8>;
+	.reg .pred %p<3>;
+	.loc	2	514	0
+$LDWbegin__Z8blasDgeriidPKdiS0_iPdi:
+	.loc	2	516	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %ctaid.y;
+	mov.u32 	%r5, %ntid.y;
+	mul.lo.u32 	%r6, %r4, %r5;
+	mov.u32 	%r7, %tid.x;
+	add.u32 	%r8, %r7, %r3;
+	mov.u32 	%r9, %tid.y;
+	add.u32 	%r10, %r9, %r6;
+	ld.param.s32 	%r11, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_m];
+	set.gt.u32.s32 	%r12, %r11, %r8;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_n];
+	set.gt.u32.s32 	%r15, %r14, %r10;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_15_1282;
+	.loc	2	494	0
+	ld.param.u64 	%rd1, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_A];
+	ld.param.s32 	%r19, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_lda];
+	mul.lo.s32 	%r20, %r19, %r10;
+	add.s32 	%r21, %r8, %r20;
+	cvt.s64.s32 	%rd2, %r21;
+	mul.wide.s32 	%rd3, %r21, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.u64 	%rd5, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_y];
+	ld.param.s32 	%r22, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_incy];
+	mul.lo.s32 	%r23, %r22, %r10;
+	cvt.s64.s32 	%rd6, %r23;
+	mul.wide.s32 	%rd7, %r23, 8;
+	add.u64 	%rd8, %rd5, %rd7;
+	ld.global.f64 	%fd2, [%rd8+0];
+	ld.param.u64 	%rd9, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_x];
+	ld.param.s32 	%r24, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_incx];
+	mul.lo.s32 	%r25, %r24, %r8;
+	cvt.s64.s32 	%rd10, %r25;
+	mul.wide.s32 	%rd11, %r25, 8;
+	add.u64 	%rd12, %rd9, %rd11;
+	ld.global.f64 	%fd3, [%rd12+0];
+	ld.param.f64 	%fd4, [__cudaparm__Z8blasDgeriidPKdiS0_iPdi_alpha];
+	mul.f64 	%fd5, %fd3, %fd4;
+	mad.rn.f64 	%fd6, %fd2, %fd5, %fd1;
+	st.global.f64 	[%rd4+0], %fd6;
+$Lt_15_1282:
+	.loc	2	517	0
+	exit;
+$LDWend__Z8blasDgeriidPKdiS0_iPdi:
+	} // _Z8blasDgeriidPKdiS0_iPdi
+
+	.entry ptaskDger (
+		.param .u64 __cudaparm_ptaskDger_alpha_var,
+		.param .u64 __cudaparm_ptaskDger_x,
+		.param .u64 __cudaparm_ptaskDger_y,
+		.param .u64 __cudaparm_ptaskDger_A,
+		.param .align 4 .b8 __cudaparm_ptaskDger_params[32])
+	{
+	.reg .u32 %r<30>;
+	.reg .u64 %rd<24>;
+	.reg .f64 %fd<9>;
+	.reg .pred %p<3>;
+	.loc	2	537	0
+$LDWbegin_ptaskDger:
+	.loc	2	579	0
+	mov.u32 	%r1, %ctaid.x;
+	mov.u32 	%r2, %ntid.x;
+	mul.lo.u32 	%r3, %r1, %r2;
+	mov.u32 	%r4, %ctaid.y;
+	mov.u32 	%r5, %ntid.y;
+	mul.lo.u32 	%r6, %r4, %r5;
+	mov.u32 	%r7, %tid.x;
+	add.u32 	%r8, %r7, %r3;
+	mov.u32 	%r9, %tid.y;
+	add.u32 	%r10, %r9, %r6;
+	ld.param.s32 	%r11, [__cudaparm_ptaskDger_params+16];
+	set.gt.u32.s32 	%r12, %r11, %r8;
+	neg.s32 	%r13, %r12;
+	ld.param.s32 	%r14, [__cudaparm_ptaskDger_params+20];
+	set.gt.u32.s32 	%r15, %r14, %r10;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r13, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_16_1282;
+	.loc	2	494	0
+	ld.param.u64 	%rd1, [__cudaparm_ptaskDger_A];
+	ld.param.s32 	%r19, [__cudaparm_ptaskDger_params+12];
+	mul.lo.s32 	%r20, %r19, %r10;
+	add.s32 	%r21, %r8, %r20;
+	cvt.s64.s32 	%rd2, %r21;
+	mul.wide.s32 	%rd3, %r21, 8;
+	add.u64 	%rd4, %rd1, %rd3;
+	ld.global.f64 	%fd1, [%rd4+0];
+	ld.param.u64 	%rd5, [__cudaparm_ptaskDger_y];
+	ld.param.s32 	%r22, [__cudaparm_ptaskDger_params+0];
+	cvt.s64.s32 	%rd6, %r22;
+	mul.wide.s32 	%rd7, %r22, 8;
+	add.u64 	%rd8, %rd5, %rd7;
+	ld.param.s32 	%r23, [__cudaparm_ptaskDger_params+8];
+	mul.lo.s32 	%r24, %r23, %r10;
+	cvt.s64.s32 	%rd9, %r24;
+	mul.wide.s32 	%rd10, %r24, 8;
+	add.u64 	%rd11, %rd8, %rd10;
+	ld.global.f64 	%fd2, [%rd11+0];
+	ld.param.u64 	%rd12, [__cudaparm_ptaskDger_alpha_var];
+	ld.param.s32 	%r25, [__cudaparm_ptaskDger_params+24];
+	cvt.s64.s32 	%rd13, %r25;
+	mul.wide.s32 	%rd14, %r25, 8;
+	add.u64 	%rd15, %rd12, %rd14;
+	ldu.global.f64 	%fd3, [%rd15+0];
+	ld.param.u64 	%rd16, [__cudaparm_ptaskDger_x];
+	ld.param.s32 	%r26, [__cudaparm_ptaskDger_params+28];
+	cvt.s64.s32 	%rd17, %r26;
+	mul.wide.s32 	%rd18, %r26, 8;
+	add.u64 	%rd19, %rd16, %rd18;
+	ld.param.s32 	%r27, [__cudaparm_ptaskDger_params+4];
+	mul.lo.s32 	%r28, %r27, %r8;
+	cvt.s64.s32 	%rd20, %r28;
+	mul.wide.s32 	%rd21, %r28, 8;
+	add.u64 	%rd22, %rd19, %rd21;
+	ld.global.f64 	%fd4, [%rd22+0];
+	mul.f64 	%fd5, %fd3, %fd4;
+	neg.f64 	%fd6, %fd5;
+	mad.rn.f64 	%fd7, %fd2, %fd6, %fd1;
+	st.global.f64 	[%rd4+0], %fd7;
+$Lt_16_1282:
+	.loc	2	584	0
+	exit;
+$LDWend_ptaskDger:
+	} // ptaskDger
+
+	.entry _Z9blasDnrm2iPKdiPd (
+		.param .s32 __cudaparm__Z9blasDnrm2iPKdiPd_n,
+		.param .u64 __cudaparm__Z9blasDnrm2iPKdiPd_x,
+		.param .s32 __cudaparm__Z9blasDnrm2iPKdiPd_incx,
+		.param .u64 __cudaparm__Z9blasDnrm2iPKdiPd_result)
+	{
+	.reg .u32 %r<26>;
+	.reg .u64 %rd<6>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<5>;
+	.loc	2	639	0
+$LDWbegin__Z9blasDnrm2iPKdiPd:
+	.loc	2	641	0
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	mov.s32 	%r6, 0;
+	set.eq.u32.s32 	%r7, %r5, %r6;
+	neg.s32 	%r8, %r7;
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r8, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_17_2306;
+	ld.param.s32 	%r19, [__cudaparm__Z9blasDnrm2iPKdiPd_n];
+	mov.u32 	%r20, 0;
+	setp.le.s32 	%p2, %r19, %r20;
+	@%p2 bra 	$Lt_17_3842;
+	mov.s32 	%r21, %r19;
+	ld.param.s32 	%r22, [__cudaparm__Z9blasDnrm2iPKdiPd_incx];
+	cvt.s64.s32 	%rd1, %r22;
+	mul.wide.s32 	%rd2, %r22, 8;
+	ld.param.u64 	%rd3, [__cudaparm__Z9blasDnrm2iPKdiPd_x];
+	mov.s32 	%r23, 0;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	mov.s32 	%r24, %r21;
+$Lt_17_3330:
+ //<loop> Loop body line 641, nesting depth: 1, estimated iterations: unknown
+	.loc	2	628	0
+	ld.global.f64 	%fd2, [%rd3+0];
+	.loc	2	629	0
+	mad.rn.f64 	%fd1, %fd2, %fd2, %fd1;
+	add.s32 	%r23, %r23, 1;
+	add.u64 	%rd3, %rd2, %rd3;
+	setp.ne.s32 	%p3, %r19, %r23;
+	@%p3 bra 	$Lt_17_3330;
+	bra.uni 	$Lt_17_2818;
+$Lt_17_3842:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_17_2818:
+	.loc	2	632	0
+	sqrt.rn.f64 	%fd3, %fd1;
+	ld.param.u64 	%rd4, [__cudaparm__Z9blasDnrm2iPKdiPd_result];
+	st.global.f64 	[%rd4+0], %fd3;
+$Lt_17_2306:
+	.loc	2	641	0
+	exit;
+$LDWend__Z9blasDnrm2iPKdiPd:
+	} // _Z9blasDnrm2iPKdiPd
+
+	.entry ptaskDnrm2 (
+		.param .u64 __cudaparm_ptaskDnrm2_x,
+		.param .u64 __cudaparm_ptaskDnrm2_y,
+		.param .align 4 .b8 __cudaparm_ptaskDnrm2_params[16])
+	{
+	.reg .u32 %r<28>;
+	.reg .u64 %rd<12>;
+	.reg .f64 %fd<5>;
+	.reg .pred %p<5>;
+	.loc	2	655	0
+$LDWbegin_ptaskDnrm2:
+	.loc	2	658	0
+	mov.u32 	%r1, %tid.x;
+	mov.u32 	%r2, %ctaid.x;
+	mov.u32 	%r3, %ntid.x;
+	mul.lo.u32 	%r4, %r2, %r3;
+	add.u32 	%r5, %r1, %r4;
+	mov.s32 	%r6, 0;
+	set.eq.u32.s32 	%r7, %r5, %r6;
+	neg.s32 	%r8, %r7;
+	mov.u32 	%r9, %tid.y;
+	mov.u32 	%r10, %ctaid.y;
+	mov.u32 	%r11, %ntid.y;
+	mul.lo.u32 	%r12, %r10, %r11;
+	add.u32 	%r13, %r9, %r12;
+	mov.s32 	%r14, 0;
+	set.eq.u32.s32 	%r15, %r13, %r14;
+	neg.s32 	%r16, %r15;
+	and.b32 	%r17, %r8, %r16;
+	mov.u32 	%r18, 0;
+	setp.eq.s32 	%p1, %r17, %r18;
+	@%p1 bra 	$Lt_18_2306;
+	ld.param.s32 	%r19, [__cudaparm_ptaskDnrm2_params+0];
+	mov.u32 	%r20, 0;
+	setp.le.s32 	%p2, %r19, %r20;
+	@%p2 bra 	$Lt_18_3842;
+	mov.s32 	%r21, %r19;
+	ld.param.s32 	%r22, [__cudaparm_ptaskDnrm2_params+12];
+	cvt.s64.s32 	%rd1, %r22;
+	mul.wide.s32 	%rd2, %r22, 8;
+	ld.param.u64 	%rd3, [__cudaparm_ptaskDnrm2_x];
+	ld.param.s32 	%r23, [__cudaparm_ptaskDnrm2_params+4];
+	cvt.s64.s32 	%rd4, %r23;
+	mul.wide.s32 	%rd5, %r23, 8;
+	add.s64 	%rd6, %rd3, %rd5;
+	mov.s32 	%r24, 0;
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+	mov.s32 	%r25, %r21;
+$Lt_18_3330:
+ //<loop> Loop body line 658, nesting depth: 1, estimated iterations: unknown
+	.loc	2	628	0
+	ld.global.f64 	%fd2, [%rd6+0];
+	.loc	2	629	0
+	mad.rn.f64 	%fd1, %fd2, %fd2, %fd1;
+	add.s32 	%r24, %r24, 1;
+	add.s64 	%rd6, %rd6, %rd2;
+	setp.ne.s32 	%p3, %r19, %r24;
+	@%p3 bra 	$Lt_18_3330;
+	bra.uni 	$Lt_18_2818;
+$Lt_18_3842:
+	mov.f64 	%fd1, 0d0000000000000000;	// 0
+$Lt_18_2818:
+	.loc	2	632	0
+	sqrt.rn.f64 	%fd3, %fd1;
+	ld.param.u64 	%rd7, [__cudaparm_ptaskDnrm2_y];
+	ld.param.s32 	%r26, [__cudaparm_ptaskDnrm2_params+8];
+	cvt.s64.s32 	%rd8, %r26;
+	mul.wide.s32 	%rd9, %r26, 8;
+	add.u64 	%rd10, %rd7, %rd9;
+	st.global.f64 	[%rd10+0], %fd3;
+$Lt_18_2306:
+	.loc	2	660	0
+	exit;
+$LDWend_ptaskDnrm2:
+	} // ptaskDnrm2
+

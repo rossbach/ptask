@@ -1,0 +1,6 @@
+digraph DFG {
+	1[label = "top", shape=box, style=filled, color=lightblue, fontcolor=white];
+	outputNode_1[label = "A(out)_top", color=darkviolet];
+	edge [color=darkviolet];
+	1 -> outputNode_1;
+}

@@ -1,0 +1,715 @@
+	.version 1.4
+	.target sm_10, map_f64_to_f32
+	// compiled with C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\\bin/../open64/lib//be.exe
+	// nvopencc 4.1 built on 2012-04-07
+
+	//-----------------------------------------------------------
+	// Compiling C:/Users/crossbac/AppData/Local/Temp/2/tmpxft_0000036c_00000000-11_fdtdKernels.cpp3.i (C:/Users/crossbac/AppData/Local/Temp/2/ccBI#.a05892)
+	//-----------------------------------------------------------
+
+	//-----------------------------------------------------------
+	// Options:
+	//-----------------------------------------------------------
+	//  Target:ptx, ISA:sm_10, Endian:little, Pointer Size:32
+	//  -O3	(Optimization level)
+	//  -g0	(Debug level)
+	//  -m2	(Report advisories)
+	//-----------------------------------------------------------
+
+	.file	1	"C:/Users/crossbac/AppData/Local/Temp/2/tmpxft_0000036c_00000000-10_fdtdKernels.cudafe2.gpu"
+	.file	2	"d:\svc\dandelion\accelerators\referencefdtd\FDTDParams.h"
+	.file	3	"c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h"
+	.file	4	"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin/../include\crt/device_runtime.h"
+	.file	5	"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin/../include\host_defines.h"
+	.file	6	"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin/../include\builtin_types.h"
+	.file	7	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\device_types.h"
+	.file	8	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\host_defines.h"
+	.file	9	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\driver_types.h"
+	.file	10	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\surface_types.h"
+	.file	11	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\texture_types.h"
+	.file	12	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\vector_types.h"
+	.file	13	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\builtin_types.h"
+	.file	14	"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin/../include\device_launch_parameters.h"
+	.file	15	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\crt\storage_class.h"
+	.file	16	"d:/SVC/Dandelion/accelerators/ReferenceFDTD/fdtdKernels.cu"
+	.file	17	"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\bin/../include\common_functions.h"
+	.file	18	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\math_functions.h"
+	.file	19	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\math_constants.h"
+	.file	20	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\device_functions.h"
+	.file	21	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_11_atomic_functions.h"
+	.file	22	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_12_atomic_functions.h"
+	.file	23	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_13_double_functions.h"
+	.file	24	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_20_atomic_functions.h"
+	.file	25	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_20_intrinsics.h"
+	.file	26	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\sm_30_intrinsics.h"
+	.file	27	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\surface_functions.h"
+	.file	28	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\texture_fetch_functions.h"
+	.file	29	"c:\program files\nvidia gpu computing toolkit\cuda\v4.2\include\math_functions_dbl_ptx1.h"
+
+
+	.entry HxComputation (
+		.param .u32 __cudaparm_HxComputation_Hx,
+		.param .u32 __cudaparm_HxComputation_Ey,
+		.param .u32 __cudaparm_HxComputation_Ez,
+		.param .align 4 .b8 __cudaparm_HxComputation_params[40],
+		.param .u32 __cudaparm_HxComputation_HxOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<46>;
+	.reg .f32 %f<18>;
+	.reg .pred %p<3>;
+	.loc	16	26	0
+$LDWbegin_HxComputation:
+	ld.param.s32 	%r1, [__cudaparm_HxComputation_params+0];
+	add.s32 	%r2, %r1, 1;
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r3, %rh1, %rh2;
+	cvt.u32.u16 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	setp.gt.s32 	%p1, %r2, %r5;
+	@%p1 bra 	$Lt_0_1026;
+	bra.uni 	$LBB4_HxComputation;
+$Lt_0_1026:
+	.loc	16	45	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r6, %rh3, %rh4;
+	ld.param.s32 	%r7, [__cudaparm_HxComputation_params+4];
+	add.s32 	%r8, %r7, 1;
+	mul.lo.s32 	%r9, %r2, %r7;
+	cvt.u32.u16 	%r10, %tid.y;
+	add.u32 	%r11, %r10, %r6;
+	mul.lo.s32 	%r12, %r2, %r8;
+	ld.param.s32 	%r13, [__cudaparm_HxComputation_params+8];
+	div.s32 	%r14, %r11, %r13;
+	rem.s32 	%r15, %r11, %r13;
+	mul.lo.s32 	%r16, %r2, %r14;
+	mul.lo.s32 	%r17, %r9, %r15;
+	mul.lo.s32 	%r18, %r12, %r15;
+	add.s32 	%r19, %r16, %r17;
+	add.s32 	%r20, %r19, %r5;
+	mul.lo.u32 	%r21, %r20, 4;
+	ld.param.u32 	%r22, [__cudaparm_HxComputation_Ey];
+	ld.param.u32 	%r23, [__cudaparm_HxComputation_Ez];
+	ld.param.u32 	%r24, [__cudaparm_HxComputation_Hx];
+	add.u32 	%r25, %r24, %r21;
+	ld.global.f32 	%f1, [%r25+0];
+	ld.param.f32 	%f2, [__cudaparm_HxComputation_params+36];
+	ld.param.f32 	%f3, [__cudaparm_HxComputation_params+28];
+	div.full.f32 	%f4, %f2, %f3;
+	ld.param.f32 	%f5, [__cudaparm_HxComputation_params+16];
+	add.s32 	%r26, %r14, 1;
+	mul.lo.s32 	%r27, %r2, %r26;
+	add.s32 	%r28, %r18, %r27;
+	add.s32 	%r29, %r5, %r28;
+	mul.lo.u32 	%r30, %r29, 4;
+	add.u32 	%r31, %r23, %r30;
+	ld.global.f32 	%f6, [%r31+0];
+	add.s32 	%r32, %r16, %r18;
+	add.s32 	%r33, %r5, %r32;
+	mul.lo.u32 	%r34, %r33, 4;
+	add.u32 	%r35, %r23, %r34;
+	ld.global.f32 	%f7, [%r35+0];
+	sub.f32 	%f8, %f6, %f7;
+	mul.f32 	%f9, %f5, %f8;
+	ld.param.f32 	%f10, [__cudaparm_HxComputation_params+20];
+	add.s32 	%r36, %r15, 1;
+	mul.lo.s32 	%r37, %r9, %r36;
+	add.s32 	%r38, %r16, %r37;
+	add.s32 	%r39, %r5, %r38;
+	mul.lo.u32 	%r40, %r39, 4;
+	add.u32 	%r41, %r22, %r40;
+	ld.global.f32 	%f11, [%r41+0];
+	add.u32 	%r42, %r21, %r22;
+	ld.global.f32 	%f12, [%r42+0];
+	sub.f32 	%f13, %f11, %f12;
+	mul.f32 	%f14, %f10, %f13;
+	sub.f32 	%f15, %f14, %f9;
+	mad.f32 	%f16, %f4, %f15, %f1;
+	ld.param.u32 	%r43, [__cudaparm_HxComputation_HxOut];
+	add.u32 	%r44, %r43, %r21;
+	st.global.f32 	[%r44+0], %f16;
+$LBB4_HxComputation:
+	.loc	16	47	0
+	exit;
+$LDWend_HxComputation:
+	} // HxComputation
+
+	.entry HyComputation (
+		.param .u32 __cudaparm_HyComputation_Hy,
+		.param .u32 __cudaparm_HyComputation_Ex,
+		.param .u32 __cudaparm_HyComputation_Ez,
+		.param .align 4 .b8 __cudaparm_HyComputation_params[40],
+		.param .u32 __cudaparm_HyComputation_HyOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<42>;
+	.reg .f32 %f<18>;
+	.reg .pred %p<3>;
+	.loc	16	50	0
+$LDWbegin_HyComputation:
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r1, %rh1, %rh2;
+	cvt.u32.u16 	%r2, %tid.x;
+	add.u32 	%r3, %r2, %r1;
+	ld.param.s32 	%r4, [__cudaparm_HyComputation_params+0];
+	setp.gt.s32 	%p1, %r4, %r3;
+	@%p1 bra 	$Lt_1_1026;
+	bra.uni 	$LBB4_HyComputation;
+$Lt_1_1026:
+	.loc	16	69	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r5, %rh3, %rh4;
+	ld.param.s32 	%r6, [__cudaparm_HyComputation_params+4];
+	add.s32 	%r7, %r6, 1;
+	.loc	16	50	0
+	ld.param.s32 	%r4, [__cudaparm_HyComputation_params+0];
+	.loc	16	69	0
+	add.s32 	%r8, %r4, 1;
+	cvt.u32.u16 	%r9, %tid.y;
+	add.u32 	%r10, %r9, %r5;
+	mul.lo.s32 	%r11, %r7, %r8;
+	ld.param.s32 	%r12, [__cudaparm_HyComputation_params+8];
+	div.s32 	%r13, %r10, %r12;
+	rem.s32 	%r14, %r10, %r12;
+	mul.lo.s32 	%r15, %r13, %r4;
+	mul.lo.s32 	%r16, %r8, %r13;
+	mul.lo.s32 	%r17, %r14, %r4;
+	mul.lo.s32 	%r18, %r11, %r14;
+	mul.lo.s32 	%r19, %r7, %r17;
+	add.s32 	%r20, %r16, %r18;
+	add.s32 	%r21, %r15, %r19;
+	add.s32 	%r22, %r20, %r3;
+	add.s32 	%r23, %r21, %r3;
+	mul.lo.u32 	%r24, %r22, 4;
+	mul.lo.u32 	%r25, %r23, 4;
+	ld.param.u32 	%r26, [__cudaparm_HyComputation_Ez];
+	add.u32 	%r27, %r26, %r24;
+	ld.param.u32 	%r28, [__cudaparm_HyComputation_Ex];
+	ld.param.u32 	%r29, [__cudaparm_HyComputation_Hy];
+	add.u32 	%r30, %r29, %r25;
+	ld.global.f32 	%f1, [%r30+0];
+	ld.param.f32 	%f2, [__cudaparm_HyComputation_params+36];
+	ld.param.f32 	%f3, [__cudaparm_HyComputation_params+28];
+	div.full.f32 	%f4, %f2, %f3;
+	ld.param.f32 	%f5, [__cudaparm_HyComputation_params+20];
+	add.s32 	%r31, %r14, 1;
+	mul.lo.s32 	%r32, %r4, %r31;
+	mul.lo.s32 	%r33, %r7, %r32;
+	add.s32 	%r34, %r15, %r33;
+	add.s32 	%r35, %r3, %r34;
+	mul.lo.u32 	%r36, %r35, 4;
+	add.u32 	%r37, %r28, %r36;
+	ld.global.f32 	%f6, [%r37+0];
+	add.u32 	%r38, %r25, %r28;
+	ld.global.f32 	%f7, [%r38+0];
+	sub.f32 	%f8, %f6, %f7;
+	mul.f32 	%f9, %f5, %f8;
+	ld.param.f32 	%f10, [__cudaparm_HyComputation_params+12];
+	ld.global.f32 	%f11, [%r27+4];
+	ld.global.f32 	%f12, [%r27+0];
+	sub.f32 	%f13, %f11, %f12;
+	mul.f32 	%f14, %f10, %f13;
+	sub.f32 	%f15, %f14, %f9;
+	mad.f32 	%f16, %f4, %f15, %f1;
+	ld.param.u32 	%r39, [__cudaparm_HyComputation_HyOut];
+	add.u32 	%r40, %r39, %r25;
+	st.global.f32 	[%r40+0], %f16;
+$LBB4_HyComputation:
+	.loc	16	71	0
+	exit;
+$LDWend_HyComputation:
+	} // HyComputation
+
+	.entry HzComputation (
+		.param .u32 __cudaparm_HzComputation_Hz,
+		.param .u32 __cudaparm_HzComputation_Ex,
+		.param .u32 __cudaparm_HzComputation_Ey,
+		.param .align 4 .b8 __cudaparm_HzComputation_params[40],
+		.param .u32 __cudaparm_HzComputation_HzOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<46>;
+	.reg .f32 %f<18>;
+	.reg .pred %p<3>;
+	.loc	16	74	0
+$LDWbegin_HzComputation:
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r1, %rh1, %rh2;
+	cvt.u32.u16 	%r2, %tid.x;
+	add.u32 	%r3, %r2, %r1;
+	ld.param.s32 	%r4, [__cudaparm_HzComputation_params+0];
+	setp.gt.s32 	%p1, %r4, %r3;
+	@%p1 bra 	$Lt_2_1026;
+	bra.uni 	$LBB4_HzComputation;
+$Lt_2_1026:
+	.loc	16	93	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r5, %rh3, %rh4;
+	ld.param.s32 	%r6, [__cudaparm_HzComputation_params+8];
+	add.s32 	%r7, %r6, 1;
+	.loc	16	74	0
+	ld.param.s32 	%r4, [__cudaparm_HzComputation_params+0];
+	.loc	16	93	0
+	add.s32 	%r8, %r4, 1;
+	ld.param.s32 	%r9, [__cudaparm_HzComputation_params+4];
+	add.s32 	%r10, %r9, 1;
+	cvt.u32.u16 	%r11, %tid.y;
+	add.u32 	%r12, %r11, %r5;
+	mul.lo.s32 	%r13, %r8, %r9;
+	div.s32 	%r14, %r12, %r7;
+	rem.s32 	%r15, %r12, %r7;
+	mul.lo.s32 	%r16, %r14, %r4;
+	mul.lo.s32 	%r17, %r8, %r14;
+	mul.lo.s32 	%r18, %r15, %r4;
+	mul.lo.s32 	%r19, %r13, %r15;
+	mul.lo.s32 	%r20, %r18, %r9;
+	mul.lo.s32 	%r21, %r10, %r18;
+	add.s32 	%r22, %r17, %r19;
+	add.s32 	%r23, %r16, %r20;
+	add.s32 	%r24, %r22, %r3;
+	add.s32 	%r25, %r23, %r3;
+	mul.lo.u32 	%r26, %r24, 4;
+	mul.lo.u32 	%r27, %r25, 4;
+	ld.param.u32 	%r28, [__cudaparm_HzComputation_Ey];
+	add.u32 	%r29, %r28, %r26;
+	ld.param.u32 	%r30, [__cudaparm_HzComputation_Ex];
+	ld.param.u32 	%r31, [__cudaparm_HzComputation_Hz];
+	add.u32 	%r32, %r31, %r27;
+	ld.global.f32 	%f1, [%r32+0];
+	ld.param.f32 	%f2, [__cudaparm_HzComputation_params+36];
+	ld.param.f32 	%f3, [__cudaparm_HzComputation_params+28];
+	div.full.f32 	%f4, %f2, %f3;
+	ld.param.f32 	%f5, [__cudaparm_HzComputation_params+12];
+	ld.global.f32 	%f6, [%r29+4];
+	ld.global.f32 	%f7, [%r29+0];
+	sub.f32 	%f8, %f6, %f7;
+	mul.f32 	%f9, %f5, %f8;
+	ld.param.f32 	%f10, [__cudaparm_HzComputation_params+16];
+	add.s32 	%r33, %r14, 1;
+	mul.lo.s32 	%r34, %r4, %r33;
+	add.s32 	%r35, %r21, %r34;
+	add.s32 	%r36, %r3, %r35;
+	mul.lo.u32 	%r37, %r36, 4;
+	add.u32 	%r38, %r30, %r37;
+	ld.global.f32 	%f11, [%r38+0];
+	add.s32 	%r39, %r16, %r21;
+	add.s32 	%r40, %r3, %r39;
+	mul.lo.u32 	%r41, %r40, 4;
+	add.u32 	%r42, %r30, %r41;
+	ld.global.f32 	%f12, [%r42+0];
+	sub.f32 	%f13, %f11, %f12;
+	mul.f32 	%f14, %f10, %f13;
+	sub.f32 	%f15, %f14, %f9;
+	mad.f32 	%f16, %f4, %f15, %f1;
+	ld.param.u32 	%r43, [__cudaparm_HzComputation_HzOut];
+	add.u32 	%r44, %r43, %r27;
+	st.global.f32 	[%r44+0], %f16;
+$LBB4_HzComputation:
+	.loc	16	95	0
+	exit;
+$LDWend_HzComputation:
+	} // HzComputation
+
+	.entry ExComputation (
+		.param .u32 __cudaparm_ExComputation_Ex,
+		.param .u32 __cudaparm_ExComputation_Hy,
+		.param .u32 __cudaparm_ExComputation_Hz,
+		.param .align 4 .b8 __cudaparm_ExComputation_params[40],
+		.param .u32 __cudaparm_ExComputation_ExOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<61>;
+	.reg .f32 %f<19>;
+	.reg .pred %p<7>;
+	.loc	16	98	0
+$LDWbegin_ExComputation:
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r1, %rh1, %rh2;
+	cvt.u32.u16 	%r2, %tid.x;
+	add.u32 	%r3, %r2, %r1;
+	ld.param.s32 	%r4, [__cudaparm_ExComputation_params+0];
+	setp.gt.s32 	%p1, %r4, %r3;
+	@%p1 bra 	$Lt_3_3842;
+	bra.uni 	$LBB12_ExComputation;
+$Lt_3_3842:
+	.loc	16	111	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r5, %rh3, %rh4;
+	ld.param.s32 	%r6, [__cudaparm_ExComputation_params+8];
+	add.s32 	%r7, %r6, 1;
+	cvt.u32.u16 	%r8, %tid.y;
+	add.u32 	%r9, %r8, %r5;
+	div.s32 	%r10, %r9, %r7;
+	rem.s32 	%r11, %r9, %r7;
+	mov.u32 	%r12, 0;
+	setp.le.s32 	%p2, %r10, %r12;
+	@%p2 bra 	$Lt_3_4354;
+	ld.param.s32 	%r13, [__cudaparm_ExComputation_params+4];
+	mov.u32 	%r14, 0;
+	setp.le.s32 	%p3, %r11, %r14;
+	@%p3 bra 	$Lt_3_4610;
+	ld.param.s32 	%r13, [__cudaparm_ExComputation_params+4];
+	sub.s32 	%r15, %r13, 1;
+	setp.gt.s32 	%p4, %r10, %r15;
+	@%p4 bra 	$Lt_3_4610;
+	ld.param.s32 	%r6, [__cudaparm_ExComputation_params+8];
+	sub.s32 	%r16, %r6, 1;
+	setp.le.s32 	%p5, %r11, %r16;
+	@%p5 bra 	$L_3_2818;
+	bra.uni 	$Lt_3_4610;
+$Lt_3_4354:
+	ld.param.s32 	%r13, [__cudaparm_ExComputation_params+4];
+$Lt_3_4610:
+$L_3_3074:
+	.loc	16	113	0
+	add.s32 	%r17, %r13, 1;
+	.loc	16	98	0
+	ld.param.s32 	%r4, [__cudaparm_ExComputation_params+0];
+	.loc	16	113	0
+	mul.lo.s32 	%r18, %r10, %r4;
+	mul.lo.s32 	%r19, %r11, %r4;
+	mul.lo.s32 	%r20, %r19, %r17;
+	add.s32 	%r21, %r20, %r18;
+	add.s32 	%r22, %r21, %r3;
+	mul.lo.u32 	%r23, %r22, 4;
+	ld.param.u32 	%r24, [__cudaparm_ExComputation_Ex];
+	add.u32 	%r25, %r24, %r23;
+	ld.global.f32 	%f1, [%r25+0];
+	ld.param.u32 	%r26, [__cudaparm_ExComputation_ExOut];
+	add.u32 	%r27, %r26, %r23;
+	st.global.f32 	[%r27+0], %f1;
+	bra.uni 	$LBB12_ExComputation;
+$L_3_2818:
+	.loc	16	111	0
+	ld.param.s32 	%r13, [__cudaparm_ExComputation_params+4];
+	.loc	16	119	0
+	add.s32 	%r28, %r13, 1;
+	.loc	16	98	0
+	ld.param.s32 	%r4, [__cudaparm_ExComputation_params+0];
+	.loc	16	119	0
+	mul.lo.s32 	%r29, %r10, %r4;
+	mul.lo.s32 	%r30, %r11, %r4;
+	mul.lo.s32 	%r31, %r30, %r28;
+	mul.lo.s32 	%r32, %r30, %r13;
+	add.s32 	%r33, %r31, %r29;
+	add.s32 	%r34, %r33, %r3;
+	mul.lo.u32 	%r35, %r34, 4;
+	ld.param.u32 	%r36, [__cudaparm_ExComputation_Hz];
+	ld.param.u32 	%r37, [__cudaparm_ExComputation_Hy];
+	ld.param.u32 	%r38, [__cudaparm_ExComputation_Ex];
+	add.u32 	%r39, %r38, %r35;
+	ld.global.f32 	%f2, [%r39+0];
+	ld.param.f32 	%f3, [__cudaparm_ExComputation_params+36];
+	ld.param.f32 	%f4, [__cudaparm_ExComputation_params+24];
+	div.full.f32 	%f5, %f3, %f4;
+	ld.param.f32 	%f6, [__cudaparm_ExComputation_params+20];
+	add.u32 	%r40, %r35, %r37;
+	ld.global.f32 	%f7, [%r40+0];
+	sub.s32 	%r41, %r11, 1;
+	mul.lo.s32 	%r42, %r4, %r41;
+	mul.lo.s32 	%r43, %r28, %r42;
+	add.s32 	%r44, %r29, %r43;
+	add.s32 	%r45, %r3, %r44;
+	mul.lo.u32 	%r46, %r45, 4;
+	add.u32 	%r47, %r37, %r46;
+	ld.global.f32 	%f8, [%r47+0];
+	sub.f32 	%f9, %f7, %f8;
+	mul.f32 	%f10, %f6, %f9;
+	ld.param.f32 	%f11, [__cudaparm_ExComputation_params+16];
+	add.s32 	%r48, %r32, %r29;
+	add.s32 	%r49, %r3, %r48;
+	mul.lo.u32 	%r50, %r49, 4;
+	add.u32 	%r51, %r36, %r50;
+	ld.global.f32 	%f12, [%r51+0];
+	sub.s32 	%r52, %r10, 1;
+	mul.lo.s32 	%r53, %r4, %r52;
+	add.s32 	%r54, %r32, %r53;
+	add.s32 	%r55, %r3, %r54;
+	mul.lo.u32 	%r56, %r55, 4;
+	add.u32 	%r57, %r36, %r56;
+	ld.global.f32 	%f13, [%r57+0];
+	sub.f32 	%f14, %f12, %f13;
+	mul.f32 	%f15, %f11, %f14;
+	sub.f32 	%f16, %f15, %f10;
+	mad.f32 	%f17, %f5, %f16, %f2;
+	ld.param.u32 	%r58, [__cudaparm_ExComputation_ExOut];
+	add.u32 	%r59, %r58, %r35;
+	st.global.f32 	[%r59+0], %f17;
+$LBB12_ExComputation:
+	.loc	16	122	0
+	exit;
+$LDWend_ExComputation:
+	} // ExComputation
+
+	.entry EyComputation (
+		.param .u32 __cudaparm_EyComputation_Ey,
+		.param .u32 __cudaparm_EyComputation_Hx,
+		.param .u32 __cudaparm_EyComputation_Hz,
+		.param .align 4 .b8 __cudaparm_EyComputation_params[40],
+		.param .u32 __cudaparm_EyComputation_EyOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<57>;
+	.reg .f32 %f<19>;
+	.reg .pred %p<7>;
+	.loc	16	125	0
+$LDWbegin_EyComputation:
+	ld.param.s32 	%r1, [__cudaparm_EyComputation_params+0];
+	add.s32 	%r2, %r1, 1;
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r3, %rh1, %rh2;
+	cvt.u32.u16 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	setp.gt.s32 	%p1, %r2, %r5;
+	@%p1 bra 	$Lt_4_3842;
+	bra.uni 	$LBB12_EyComputation;
+$Lt_4_3842:
+	.loc	16	138	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r6, %rh3, %rh4;
+	ld.param.s32 	%r7, [__cudaparm_EyComputation_params+8];
+	add.s32 	%r8, %r7, 1;
+	cvt.u32.u16 	%r9, %tid.y;
+	add.u32 	%r10, %r9, %r6;
+	rem.s32 	%r11, %r10, %r8;
+	mov.u32 	%r12, 0;
+	setp.le.s32 	%p2, %r5, %r12;
+	@%p2 bra 	$Lt_4_4610;
+	mov.u32 	%r13, 0;
+	setp.le.s32 	%p3, %r11, %r13;
+	@%p3 bra 	$Lt_4_4610;
+	.loc	16	125	0
+	ld.param.s32 	%r1, [__cudaparm_EyComputation_params+0];
+	.loc	16	138	0
+	sub.s32 	%r14, %r1, 1;
+	setp.gt.s32 	%p4, %r5, %r14;
+	@%p4 bra 	$Lt_4_4610;
+	ld.param.s32 	%r7, [__cudaparm_EyComputation_params+8];
+	sub.s32 	%r15, %r7, 1;
+	setp.le.s32 	%p5, %r11, %r15;
+	@%p5 bra 	$L_4_2818;
+$Lt_4_4610:
+$L_4_3074:
+	.loc	16	140	0
+	ld.param.s32 	%r16, [__cudaparm_EyComputation_params+4];
+	mul.lo.s32 	%r17, %r16, %r2;
+	div.s32 	%r18, %r10, %r8;
+	mul.lo.s32 	%r19, %r2, %r18;
+	mul.lo.s32 	%r20, %r11, %r17;
+	add.s32 	%r21, %r20, %r19;
+	add.s32 	%r22, %r21, %r5;
+	mul.lo.u32 	%r23, %r22, 4;
+	ld.param.u32 	%r24, [__cudaparm_EyComputation_Ey];
+	add.u32 	%r25, %r24, %r23;
+	ld.global.f32 	%f1, [%r25+0];
+	ld.param.u32 	%r26, [__cudaparm_EyComputation_EyOut];
+	add.u32 	%r27, %r26, %r23;
+	st.global.f32 	[%r27+0], %f1;
+	bra.uni 	$LBB12_EyComputation;
+$L_4_2818:
+	.loc	16	146	0
+	ld.param.s32 	%r28, [__cudaparm_EyComputation_params+4];
+	mul.lo.s32 	%r29, %r2, %r28;
+	div.s32 	%r30, %r10, %r8;
+	mul.lo.s32 	%r31, %r2, %r30;
+	.loc	16	125	0
+	ld.param.s32 	%r1, [__cudaparm_EyComputation_params+0];
+	.loc	16	146	0
+	mul.lo.s32 	%r32, %r30, %r1;
+	mul.lo.s32 	%r33, %r11, %r29;
+	mul.lo.s32 	%r34, %r11, %r1;
+	add.s32 	%r35, %r33, %r31;
+	mul.lo.s32 	%r36, %r34, %r28;
+	add.s32 	%r37, %r35, %r5;
+	add.s32 	%r38, %r32, %r36;
+	mul.lo.u32 	%r39, %r37, 4;
+	add.s32 	%r40, %r38, %r5;
+	mul.lo.u32 	%r41, %r40, 4;
+	ld.param.u32 	%r42, [__cudaparm_EyComputation_Hz];
+	add.u32 	%r43, %r42, %r41;
+	ld.param.u32 	%r44, [__cudaparm_EyComputation_Hx];
+	ld.param.u32 	%r45, [__cudaparm_EyComputation_Ey];
+	add.u32 	%r46, %r45, %r39;
+	ld.global.f32 	%f2, [%r46+0];
+	ld.param.f32 	%f3, [__cudaparm_EyComputation_params+36];
+	ld.param.f32 	%f4, [__cudaparm_EyComputation_params+24];
+	div.full.f32 	%f5, %f3, %f4;
+	ld.param.f32 	%f6, [__cudaparm_EyComputation_params+12];
+	ld.global.f32 	%f7, [%r43+0];
+	ld.global.f32 	%f8, [%r43+-4];
+	sub.f32 	%f9, %f7, %f8;
+	mul.f32 	%f10, %f6, %f9;
+	ld.param.f32 	%f11, [__cudaparm_EyComputation_params+20];
+	add.u32 	%r47, %r39, %r44;
+	ld.global.f32 	%f12, [%r47+0];
+	sub.s32 	%r48, %r11, 1;
+	mul.lo.s32 	%r49, %r29, %r48;
+	add.s32 	%r50, %r31, %r49;
+	add.s32 	%r51, %r5, %r50;
+	mul.lo.u32 	%r52, %r51, 4;
+	add.u32 	%r53, %r44, %r52;
+	ld.global.f32 	%f13, [%r53+0];
+	sub.f32 	%f14, %f12, %f13;
+	mul.f32 	%f15, %f11, %f14;
+	sub.f32 	%f16, %f15, %f10;
+	mad.f32 	%f17, %f5, %f16, %f2;
+	ld.param.u32 	%r54, [__cudaparm_EyComputation_EyOut];
+	add.u32 	%r55, %r54, %r39;
+	st.global.f32 	[%r55+0], %f17;
+$LBB12_EyComputation:
+	.loc	16	149	0
+	exit;
+$LDWend_EyComputation:
+	} // EyComputation
+
+	.entry EzComputation (
+		.param .u32 __cudaparm_EzComputation_Ez,
+		.param .u32 __cudaparm_EzComputation_Hx,
+		.param .u32 __cudaparm_EzComputation_Hy,
+		.param .align 4 .b8 __cudaparm_EzComputation_params[40],
+		.param .u32 __cudaparm_EzComputation_EzOut)
+	{
+	.reg .u16 %rh<6>;
+	.reg .u32 %r<62>;
+	.reg .f32 %f<19>;
+	.reg .pred %p<7>;
+	.loc	16	152	0
+$LDWbegin_EzComputation:
+	ld.param.s32 	%r1, [__cudaparm_EzComputation_params+0];
+	add.s32 	%r2, %r1, 1;
+	mov.u16 	%rh1, %ctaid.x;
+	mov.u16 	%rh2, %ntid.x;
+	mul.wide.u16 	%r3, %rh1, %rh2;
+	cvt.u32.u16 	%r4, %tid.x;
+	add.u32 	%r5, %r4, %r3;
+	setp.gt.s32 	%p1, %r2, %r5;
+	@%p1 bra 	$Lt_5_3842;
+	bra.uni 	$LBB13_EzComputation;
+$Lt_5_3842:
+	.loc	16	165	0
+	mov.u16 	%rh3, %ctaid.y;
+	mov.u16 	%rh4, %ntid.y;
+	mul.wide.u16 	%r6, %rh3, %rh4;
+	cvt.u32.u16 	%r7, %tid.y;
+	add.u32 	%r8, %r7, %r6;
+	ld.param.s32 	%r9, [__cudaparm_EzComputation_params+8];
+	div.s32 	%r10, %r8, %r9;
+	mov.u32 	%r11, 0;
+	setp.le.s32 	%p2, %r5, %r11;
+	@%p2 bra 	$Lt_5_4354;
+	mov.u32 	%r12, 0;
+	setp.le.s32 	%p3, %r10, %r12;
+	@%p3 bra 	$Lt_5_4610;
+	ld.param.s32 	%r13, [__cudaparm_EzComputation_params+4];
+	.loc	16	152	0
+	ld.param.s32 	%r1, [__cudaparm_EzComputation_params+0];
+	.loc	16	165	0
+	sub.s32 	%r14, %r1, 1;
+	setp.gt.s32 	%p4, %r5, %r14;
+	@%p4 bra 	$L_5_3074;
+	ld.param.s32 	%r13, [__cudaparm_EzComputation_params+4];
+	sub.s32 	%r15, %r13, 1;
+	setp.le.s32 	%p5, %r10, %r15;
+	@%p5 bra 	$L_5_2818;
+	bra.uni 	$L_5_3074;
+$Lt_5_4354:
+	ld.param.s32 	%r13, [__cudaparm_EzComputation_params+4];
+	bra.uni 	$L_5_3074;
+$Lt_5_4610:
+	ld.param.s32 	%r13, [__cudaparm_EzComputation_params+4];
+$L_5_3074:
+	.loc	16	167	0
+	add.s32 	%r16, %r13, 1;
+	mul.lo.s32 	%r17, %r2, %r16;
+	.loc	16	165	0
+	ld.param.s32 	%r9, [__cudaparm_EzComputation_params+8];
+	.loc	16	167	0
+	rem.s32 	%r18, %r8, %r9;
+	mul.lo.s32 	%r19, %r2, %r10;
+	mul.lo.s32 	%r20, %r18, %r17;
+	add.s32 	%r21, %r20, %r19;
+	add.s32 	%r22, %r21, %r5;
+	mul.lo.u32 	%r23, %r22, 4;
+	ld.param.u32 	%r24, [__cudaparm_EzComputation_Ez];
+	add.u32 	%r25, %r24, %r23;
+	ld.global.f32 	%f1, [%r25+0];
+	ld.param.u32 	%r26, [__cudaparm_EzComputation_EzOut];
+	add.u32 	%r27, %r26, %r23;
+	st.global.f32 	[%r27+0], %f1;
+	bra.uni 	$LBB13_EzComputation;
+$L_5_2818:
+	.loc	16	165	0
+	ld.param.s32 	%r13, [__cudaparm_EzComputation_params+4];
+	.loc	16	173	0
+	add.s32 	%r28, %r13, 1;
+	mul.lo.s32 	%r29, %r2, %r13;
+	mul.lo.s32 	%r30, %r2, %r28;
+	.loc	16	165	0
+	ld.param.s32 	%r9, [__cudaparm_EzComputation_params+8];
+	.loc	16	173	0
+	rem.s32 	%r31, %r8, %r9;
+	mul.lo.s32 	%r32, %r2, %r10;
+	.loc	16	152	0
+	ld.param.s32 	%r1, [__cudaparm_EzComputation_params+0];
+	.loc	16	173	0
+	mul.lo.s32 	%r33, %r10, %r1;
+	mul.lo.s32 	%r34, %r31, %r30;
+	mul.lo.s32 	%r35, %r29, %r31;
+	mul.lo.s32 	%r36, %r31, %r1;
+	add.s32 	%r37, %r34, %r32;
+	mul.lo.s32 	%r38, %r36, %r28;
+	add.s32 	%r39, %r37, %r5;
+	add.s32 	%r40, %r33, %r38;
+	mul.lo.u32 	%r41, %r39, 4;
+	add.s32 	%r42, %r40, %r5;
+	mul.lo.u32 	%r43, %r42, 4;
+	ld.param.u32 	%r44, [__cudaparm_EzComputation_Hy];
+	add.u32 	%r45, %r44, %r43;
+	ld.param.u32 	%r46, [__cudaparm_EzComputation_Hx];
+	ld.param.u32 	%r47, [__cudaparm_EzComputation_Ez];
+	add.u32 	%r48, %r47, %r41;
+	ld.global.f32 	%f2, [%r48+0];
+	ld.param.f32 	%f3, [__cudaparm_EzComputation_params+36];
+	ld.param.f32 	%f4, [__cudaparm_EzComputation_params+24];
+	div.full.f32 	%f5, %f3, %f4;
+	ld.param.f32 	%f6, [__cudaparm_EzComputation_params+16];
+	add.s32 	%r49, %r35, %r32;
+	add.s32 	%r50, %r5, %r49;
+	mul.lo.u32 	%r51, %r50, 4;
+	add.u32 	%r52, %r46, %r51;
+	ld.global.f32 	%f7, [%r52+0];
+	sub.s32 	%r53, %r10, 1;
+	mul.lo.s32 	%r54, %r2, %r53;
+	add.s32 	%r55, %r35, %r54;
+	add.s32 	%r56, %r5, %r55;
+	mul.lo.u32 	%r57, %r56, 4;
+	add.u32 	%r58, %r46, %r57;
+	ld.global.f32 	%f8, [%r58+0];
+	sub.f32 	%f9, %f7, %f8;
+	mul.f32 	%f10, %f6, %f9;
+	ld.param.f32 	%f11, [__cudaparm_EzComputation_params+12];
+	ld.global.f32 	%f12, [%r45+0];
+	ld.global.f32 	%f13, [%r45+-4];
+	sub.f32 	%f14, %f12, %f13;
+	mul.f32 	%f15, %f11, %f14;
+	sub.f32 	%f16, %f15, %f10;
+	mad.f32 	%f17, %f5, %f16, %f2;
+	ld.param.u32 	%r59, [__cudaparm_EzComputation_EzOut];
+	add.u32 	%r60, %r59, %r41;
+	st.global.f32 	[%r60+0], %f17;
+$LBB13_EzComputation:
+	.loc	16	176	0
+	exit;
+$LDWend_EzComputation:
+	} // EzComputation
+

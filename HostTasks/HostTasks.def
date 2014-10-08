@@ -1,0 +1,4 @@
+LIBRARY HostTasks
+EXPORTS
+    htvadd = _htvadd@8
+    htmatmul = _htmatmul@8

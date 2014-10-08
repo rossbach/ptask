@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDX|Win32">
+      <Configuration>DebugDX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDX|x64">
+      <Configuration>DebugDX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLynx|Win32">
+      <Configuration>DebugLynx</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLynx|x64">
+      <Configuration>DebugLynx</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDX|Win32">
+      <Configuration>ReleaseDX</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDX|x64">
+      <Configuration>ReleaseDX</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bufferdimsdesc.h" />
+    <ClInclude Include="channelpredication.h" />
+    <ClInclude Include="clvectoradd.h" />
+    <ClInclude Include="confighelpers.h" />
+    <ClInclude Include="controlpropagation.h" />
+    <ClInclude Include="cpfxsum.h" />
+    <ClInclude Include="deferredports.h" />
+    <ClInclude Include="descportsout.h" />
+    <ClInclude Include="dxinout.h" />
+    <ClInclude Include="elemtype.h" />
+    <ClInclude Include="gatedports.h" />
+    <ClInclude Include="graphbench.h" />
+    <ClInclude Include="graphcladd.h" />
+    <ClInclude Include="graphcuadd.h" />
+    <ClInclude Include="graphcupca.h" />
+    <ClInclude Include="graphemgmm.h" />
+    <ClInclude Include="graphfdtd.h" />
+    <ClInclude Include="graphgroupby.h" />
+    <ClInclude Include="graphhostmetaports.h" />
+    <ClInclude Include="graphhostmm.h" />
+    <ClInclude Include="graphinitports.h" />
+    <ClInclude Include="graphinout.h" />
+    <ClInclude Include="graphmatmul.h" />
+    <ClInclude Include="graphmatmulraw.h" />
+    <ClInclude Include="graphmdmatmul.h" />
+    <ClInclude Include="graphmetaports.h" />
+    <ClInclude Include="graphsort.h" />
+    <ClInclude Include="graphinitializerchannels.h" />
+    <ClInclude Include="iteration.h" />
+    <ClInclude Include="matmul.h" />
+    <ClInclude Include="matrixtask.h" />
+    <ClInclude Include="pca_cpu.h" />
+    <ClInclude Include="permanentblocks.h" />
+    <ClInclude Include="pfxsum.h" />
+    <ClInclude Include="pipelinestresstest.h" />
+    <ClInclude Include="platformcheck.h" />
+    <ClInclude Include="ptaskcublas.h" />
+    <ClInclude Include="rttests.h" />
+    <ClInclude Include="select.h" />
+    <ClInclude Include="shaderparms.h" />
+    <ClInclude Include="Simple3DArray.h" />
+    <ClInclude Include="SimpleMatrix.h" />
+    <ClInclude Include="SimpleVector.h" />
+    <ClInclude Include="sort.h" />
+    <ClInclude Include="switchports.h" />
+    <ClInclude Include="tee.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bufferdimsdesc.cu" />
+    <None Include="channelpredication.cl" />
+    <None Include="channelpredication.cu" />
+    <None Include="channelpredication.hlsl" />
+    <None Include="controlpropagation.cl" />
+    <None Include="controlpropagation.cu" />
+    <None Include="copy.hlsl" />
+    <None Include="de.fx" />
+    <None Include="deferredports.cl" />
+    <None Include="deferredports.cu" />
+    <None Include="descportsout.cu" />
+    <None Include="fdtdKernels\ExComp.hlsl" />
+    <None Include="fdtdKernels\EyComp.hlsl" />
+    <None Include="fdtdKernels\EzComp.hlsl" />
+    <None Include="fdtdKernels\fdtdMain.compute_10.ptx" />
+    <None Include="fdtdKernels\HxComp.hlsl" />
+    <None Include="fdtdKernels\HyComp.hlsl" />
+    <None Include="fdtdKernels\HzComp.hlsl" />
+    <None Include="fdtdKernels\indexing.hlsl" />
+    <None Include="gatedports.cl" />
+    <None Include="gatedports.cu" />
+    <None Include="gemm_dandelion.hlsl" />
+    <None Include="gma_dandelion.hlsl" />
+    <None Include="initializerchannels.cu" />
+    <None Include="initializerchannels.hlsl" />
+    <None Include="initports.cl" />
+    <None Include="initports.cu" />
+    <None Include="initports.hlsl" />
+    <None Include="inout.cl" />
+    <None Include="inout.cu" />
+    <None Include="inout.hlsl" />
+    <None Include="iteration.cl" />
+    <None Include="iteration.cu" />
+    <None Include="iteration.hlsl" />
+    <None Include="iteration2.cl" />
+    <None Include="iteration2.cu" />
+    <None Include="iteration2.hlsl" />
+    <None Include="matrixadd.hlsl" />
+    <None Include="matrixaddraw.hlsl" />
+    <None Include="matrixadd_4ch.hlsl" />
+    <None Include="matrixmul.hlsl" />
+    <None Include="matrixmul_4ch.hlsl" />
+    <None Include="mdmatmul.hlsl" />
+    <None Include="metaports.cl" />
+    <None Include="metaports.cu" />
+    <None Include="metaports.hlsl" />
+    <None Include="permanentblocks.cu" />
+    <None Include="pfxsum.cu" />
+    <None Include="pfxsum.hlsl" />
+    <None Include="pipelinestresstest.cu" />
+    <None Include="scan.hlsl" />
+    <None Include="scopediteration.hlsl" />
+    <None Include="select.hlsl" />
+    <None Include="sort.hlsl" />
+    <None Include="streamadd.hlsl" />
+    <None Include="switchports.cl" />
+    <None Include="switchports.cu" />
+    <None Include="tee.cu" />
+    <None Include="tee.hlsl" />
+    <None Include="vectoradd.cl" />
+    <None Include="vectorAdd.cu" />
+    <None Include="vectoradd.hlsl" />
+    <None Include="vectordouble.hlsl" />
+    <None Include="vectornorm2.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bufferdimsdesc.cpp" />
+    <ClCompile Include="channelpredication.cpp" />
+    <ClCompile Include="controlpropagation.cpp" />
+    <ClCompile Include="cpfxsum.cpp" />
+    <ClCompile Include="deferredports.cpp" />
+    <ClCompile Include="descportsout.cpp" />
+    <ClCompile Include="dxinout.cpp" />
+    <ClCompile Include="gatedports.cpp" />
+    <ClCompile Include="graphbench.cpp" />
+    <ClCompile Include="graphcladd.cpp" />
+    <ClCompile Include="graphcuadd.cpp" />
+    <ClCompile Include="graphcupca.cpp" />
+    <ClCompile Include="graphemgmm.cpp" />
+    <ClCompile Include="graphfdtd.cpp" />
+    <ClCompile Include="graphgroupby.cpp" />
+    <ClCompile Include="graphhostmetaports.cpp" />
+    <ClCompile Include="graphhostmm.cpp" />
+    <ClCompile Include="graphinitports.cpp" />
+    <ClCompile Include="graphinout.cpp" />
+    <ClCompile Include="graphmatmul.cpp" />
+    <ClCompile Include="graphmatmulraw.cpp" />
+    <ClCompile Include="graphmdmatmul.cpp" />
+    <ClCompile Include="graphmetaports.cpp" />
+    <ClCompile Include="graphsort.cpp" />
+    <ClCompile Include="graphinitializerchannels.cpp" />
+    <ClCompile Include="iteration.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="matmul.cpp" />
+    <ClCompile Include="matrixtask.cpp" />
+    <ClCompile Include="pca_cpu.cpp" />
+    <ClCompile Include="permanentblocks.cpp" />
+    <ClCompile Include="pfxsum.cpp" />
+    <ClCompile Include="pipelinestresstest.cpp" />
+    <ClCompile Include="ptaskcublas.cpp" />
+    <ClCompile Include="rttests.cpp" />
+    <ClCompile Include="select.cpp" />
+    <ClCompile Include="sort.cpp" />
+    <ClCompile Include="switchports.cpp" />
+    <ClCompile Include="tee.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pipelinestresstest.hlsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{140EEC55-9D5B-4D5D-929E-0F8B7AD16D1A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PTaskUnitTest</RootNamespace>
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;C:\Program Files\Microsoft SDKs\Windows\v7.1\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT;CAPTURE_TIMINGS;EXTREME_TRACE;PROFILE_MIGRATION;PROFILE_TASKS;GRAPH_DIAGNOSTICS;ADHOC_STATS;PROFILE_REFCOUNT_OBJECTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005; 4201</DisableSpecificWarnings>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);d3dcompiler.lib;dxguid.lib;cublas.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\;$(CUDA_PATH)/lib/$(PlatformName);$(NVTOOLSEXT_PATH)\lib\$(Platform)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL64.dll;nvcuda.dll;nvopencl.dll;nvToolsExt64_1.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)*.bat $(SolutionDir)\bin\$(Platform)\$(Configuration)\
+</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDX|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT;DIRECTXCOMPILESUPPORT;OPENCL_SUPPORT;CAPTURE_TIMINGS;EXTREME_TRACE;PROFILE_MIGRATION;PROFILE_TASKS;GRAPH_DIAGNOSTICS;ADHOC_STATS;PROFILE_REFCOUNT_OBJECTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005; 4201</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);d3dcompiler.lib;dxguid.lib;cublas.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\;$(CUDA_PATH)/lib/$(PlatformName)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL64.dll;nvcuda.dll;nvopencl.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)*.bat $(SolutionDir)\bin\$(Platform)\$(Configuration)\
+copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLynx|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT;DIRECTXCOMPILESUPPORT;OPENCL_SUPPORT;CAPTURE_TIMINGS;EXTREME_TRACE;PROFILE_MIGRATION;PROFILE_TASKS;GRAPH_DIAGNOSTICS;ADHOC_STATS;PROFILE_REFCOUNT_OBJECTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SOURCE)/common/inc/;$(CL_SHARE)/shared/inc/;..\ptask;$(OSA_GPU_SOURCE)\multiimage;$(OSA_GPU_SOURCE)\geometry;$(OSA_GPU_SOURCE)\include;$(CUDA_PATH)/include;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005; 4201</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);d3dcompiler.lib;dxguid.lib;cublas.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\;$(CUDA_PATH)/lib/$(PlatformName)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL64.dll;nvcuda.dll;nvopencl.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)*.bat $(SolutionDir)\bin\$(Platform)\$(Configuration)\
+copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SHARE)/shared/inc/;$(CL_SOURCE)/common/inc/;..\ptask;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;CUDA_SUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SHARE)/shared/inc/;$(CL_SOURCE)/common/inc/;..\ptask;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;ptask.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SHARE)/shared/inc/;$(CL_SOURCE)/common/inc/;..\ptask;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4005; 4201</DisableSpecificWarnings>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cublas.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\;$(CUDA_PATH)/lib/$(PlatformName);$(NVTOOLSEXT_PATH)\lib\$(Platform)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll;nvToolsExt64_1.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDX|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);__STDC__;HAVE_STRING_H;DIRECTXCOMPILESUPPORT</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(CL_SHARE)/shared/inc/;$(CL_SOURCE)/common/inc/;..\ptask;$(CUDA_PATH)/include</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <OmitFramePointers>false</OmitFramePointers>
+      <DisableSpecificWarnings>4005; 4201</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OpenCL.lib;dxgi.lib;ptask.lib;d3dcompiler.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cublas.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CL_SOURCE)/common/lib/;../shared/lib;$(CL_SOURCE)/common/lib/$(Platform)/;$(SolutionDir)bin\$(Platform)\$(Configuration)\;$(CUDA_PATH)/lib/$(PlatformName)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>OpenCL.dll</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(ProjectDir)\dependences\*.dll $(SolutionDir)\bin\$(Platform)\$(Configuration)\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

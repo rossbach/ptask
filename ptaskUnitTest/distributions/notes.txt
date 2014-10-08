@@ -1,0 +1,21 @@
+
+These distributions were created using the R statistics package (version 2.12.1 - 2010-12-16) 
+using the following steps:
+
+> setwd("C:/src/svc/Dandelion")
+
+> c1 = rnorm(n=600,mean = 5,sd =0.5)
+> d1 = c(c1)
+> hist(d1, 300)
+> write.csv(d1, "dist_1.csv")
+
+> c2 = rnorm(n=300, mean = 9, sd = 0.5)
+> d2 = c(c1, c2)
+> hist(d2, 100)
+> write.csv(d2, "dist_2.csv")
+
+> c3 = rnorm(n=100, mean = 15, sd = 1.0)
+> d3 = c(c1, c2, c3)
+> hist(d3, 100)
+> write.csv(d3, "dist_3.csv")
+

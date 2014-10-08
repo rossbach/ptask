@@ -1,0 +1,10 @@
+digraph DFG {
+	1[label = "bottom", shape=box, style=filled, color=lightblue, fontcolor=white];
+	2[label = "top", shape=box, style=filled, color=blue, fontcolor=white];
+	outputNode_1[label = "A(out)_Bottom", color=red];
+	edge [color=red];
+	1 -> outputNode_1;
+	outputNode_2[label = "B(out)_Bottom", color=red];
+	edge [color=red];
+	1 -> outputNode_2;
+}

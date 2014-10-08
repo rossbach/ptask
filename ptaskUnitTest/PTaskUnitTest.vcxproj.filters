@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{3943cf30-7175-4cae-8cd6-19069721e6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\fdtd">
+      <UniqueIdentifier>{e023fe8b-a814-4401-a6a6-16bdf69d6e35}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="elemtype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matmul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixtask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderparms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clvectoradd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphmatmul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphemgmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphcuadd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphbench.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphmdmatmul.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphmatmulraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="select.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pfxsum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphcupca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pca_cpu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphcladd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleVector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphfdtd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple3DArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphinout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphhostmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphgroupby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphinitports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphmetaports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphhostmetaports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="switchports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deferredports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gatedports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlpropagation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="channelpredication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dxinout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iteration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="graphinitializerchannels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rttests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="platformcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="descportsout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bufferdimsdesc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="permanentblocks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ptaskcublas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="confighelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpfxsum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pipelinestresstest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="de.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="matrixadd.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="matrixaddraw.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="matrixmul.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="streamadd.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="vectoradd.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="sort.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="copy.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="mdmatmul.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="matrixmul_4ch.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="matrixadd_4ch.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="gemm_dandelion.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="gma_dandelion.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="scan.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="select.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="pfxsum.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="vectorAdd.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="fdtdKernels\indexing.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\HxComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\HyComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\HzComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\ExComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\EyComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\EzComp.hlsl">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="fdtdKernels\fdtdMain.compute_10.ptx">
+      <Filter>Shaders\fdtd</Filter>
+    </None>
+    <None Include="inout.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="vectoradd.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="vectornorm2.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="vectordouble.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="initports.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="metaports.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="switchports.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="deferredports.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="gatedports.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="controlpropagation.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="tee.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="channelpredication.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="inout.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="channelpredication.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="tee.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="metaports.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="initports.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="initports.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="metaports.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="inout.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="channelpredication.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="controlpropagation.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="gatedports.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="deferredports.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="switchports.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration2.cl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration2.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="iteration2.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="initializerchannels.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="scopediteration.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="descportsout.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="bufferdimsdesc.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="permanentblocks.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="pfxsum.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="pipelinestresstest.hlsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="initializerchannels.cu">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="pipelinestresstest.cu">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="getopt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphsort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphmatmul.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphemgmm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphcuadd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixtask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="matmul.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphbench.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphmdmatmul.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphmatmulraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="select.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pfxsum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphcupca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pca_cpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphcladd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphfdtd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphinout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphhostmm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphgroupby.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphinitports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphmetaports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphhostmetaports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="switchports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deferredports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gatedports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controlpropagation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tee.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="channelpredication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dxinout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iteration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphinitializerchannels.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rttests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="descportsout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferdimsdesc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="permanentblocks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ptaskcublas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpfxsum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pipelinestresstest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
